@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Start head -->
+  <head>
+    <!-- Start Meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="conservatorium Booking">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="conservatorium Booking">
+    <meta name="author" content="John Doe">
+    <!-- Start title -->
+    <title>SCLSV: Login</title>
+    <!-- Start links -->
+    <!-- IE Support -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <[end if]-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- FontAwesome v5.7.2 -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Bootstrap v4.2.1 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <!-- End head -->
+  <!-- Start body -->
+  <body>
+    <nav class="navbar signin fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-collapse text-left" id="navbar-links">
+          <ul class="navbar-nav settings col-md-6 col-12">
+            <li class="nav-item">
+              <div class="languages">
+                <div class="main-lang no-select d-flex">
+                  <div class="lang-flag"><img class="img-fluid" src="images/britain.jpg"></div>
+                  <div class="lang-name">En</div>
+                  <div class="arrow-icon"><i class="fas fa-caret-down"></i></div>
+                </div>
+                <div class="lang-list">
+                  <div class="lang d-flex">
+                    <div class="lang-flag"><img class="img-fluid" src="images/france.jpg"></div>
+                    <div class="lang-name">FR</div>
+                  </div>
+                  <div class="lang d-flex">
+                      <div class="lang-flag"><img class="img-fluid" src="images/germany.jpg"></div>
+                      <div class="lang-name">GE</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="sign-content">
+      <div class="container-fluid pl-0 h-100">
+        <div class="content d-flex h-100">
+          <!-- Start Left Content -->
+          <div class="left-content position-relative">
+            <div class="inner-content w-100 h-100">
+              <div class="bg w-100 h-100">
+                <div class="overlay h-100">
+                  <div class="text position-absolute text-center w-100">
+                    <!-- Start Title -->
+                    <div class="title">
+                      <h1>SCLSV</h1>
+                    </div>
+                    <!-- End Title -->
+                    <!-- Start description -->
+                    <div class="description">
+                      <p>Life is a journey,<br>let us be your driver</p>
+                    </div>
+                    <!-- End description -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Left Content -->
+          <!-- Start Right Content -->
+          <div class="right-content d-flex align-items-center">
+            <div class="inner-content pb-3">
+              <!-- Start Logo -->
+              <div class="logo mb-3">
+                <img src="images/gold-logo.png" alt="SCLSV-logo" width="145" class="img-fluid">
+              </div>
+              <!-- End Logo -->
+              <div class="text mb-4">
+                <!-- Start Title -->
+                <div class="title">
+                  <h1>Sign in to SCLSV</h1>
+                </div>
+                <!-- End Title -->
+                <!-- Start Description -->
+                <div class="description">
+                  <p>Enter your details below</p>
+                </div>
+                <!-- End Description -->
+              </div>
+              <!-- Start Form Container -->
+              <div class="form-container">
+                <form>
+                  <div class="form-group pb-2">
+                    <label for="email_input">EMAIL</label>
+                    <input type="text" id="email_input" class="form-control" placeholder="Ex: Dave@email.com">
+                  </div>
+                  <div class="form-group pb-3">
+                    <label for="pass_input">PASSWORD</label>
+                    <a class="forget-pass-btn" href="forgetpass.html">Forget Password?</a>
+                    <input type="password" id="pass_input" class="form-control" placeholder="Please enter your password">
+                  </div>
+                  <div class="form-group text-center">
+                    <input type="submit" value="Sign in" class="submit-btn btn">
+                  </div>
+                </form>
+              </div>
+              <!-- End Form Container -->
+            </div>
+          </div>
+          <!-- End Right Content -->
+        </div>
+      </div>
+    </section>
+    
+    
+  <!-- ====== Start Scripts ====== -->
+  <!-- Main js file -->
+  <script src="js/main.js"></script>
+  </body>
+  <!-- End body -->
+</html>

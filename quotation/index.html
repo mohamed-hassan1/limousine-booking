@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Start head -->
+  <head>
+    <!-- Start Meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="conservatorium Booking">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="conservatorium Booking">
+    <meta name="author" content="John Doe">
+    <!-- Start title -->
+    <title>Request a Quotation</title>
+    <!-- Start links -->
+    <!-- IE Support -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <[end if]-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- FontAwesome v5.7.2 -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- Bootstrap v4.2.1 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <!-- End head -->
+  <!-- Start body -->
+  <body class="quotation">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">
+          <img class="img-fluid" src="../images/icons-nav-bar-logo.png" alt="CONSERVATORIUM">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+          <spand class="navbar-toggler-icon"></spand>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar-links">
+          <ul class="navbar-nav links col-md-7 col-12 justify-content-end align-items-center">
+            <li class="nav-item"><a href="../booking/" class="nav-link">Add New Booking</a></li>
+            <li class="nav-item"><a href="../dashboard/" class="nav-link">My Bookings</a></li>
+            <li class="nav-item"><a href="../quotation/" class="nav-link active">Request a Quotation</a></li>
+          </ul>
+          <ul class="navbar-nav settings col-md-5 col-12 justify-content-end align-items-center">
+            <li class="nav-item">
+              <div class="search-input">
+                <input type="text" class="form-control" placeholder="Search all the content">
+                <span class="icon"><img src="../images/search.png" alt="search" class="img-fluid"></span>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="messages">
+                <num class="msg-num">2</num>
+                <div class="messages-icon">
+                  <img src="../images/conversation.png" alt="messages" class="img-fluid">
+                </div>
+                <div class="msg-list dropdown-list">
+                  <div class="msg">
+                    <div class="msg-pic">
+                      <img src="../images/member-img.jpg" class="img-fluid">
+                    </div>
+                    <div class="msg-txt">
+                      <div class="msg-member-name">Dave K.</div>
+                      <div class="txt">You look awesome!</div>
+                    </div>
+                  </div>
+                  <div class="msg">
+                    <div class="msg-pic">
+                      <img src="../images/booked.jpg" class="img-fluid">
+                    </div>
+                    <div class="msg-txt">
+                      <div class="msg-member-name">Mohamed E.</div>
+                      <div class="txt">Lorem ipsum is placeholder te....</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li> 
+            <li class="nav-item">
+              <div class="member d-flex align-items-center">
+                <div class="member-pic">
+                  <img src="../images/member-img.jpg" alt="Dave" class="img-fluid">
+                </div>
+                <div class="notifications-list dropdown-list">
+                  <a href="../user/" class="noti">
+                    <div class="noti-content">
+                      <span class="icon">
+                        <img src="../images/my-profilex.png" class="img-fluid">
+                      </span>
+                      <span class="text">System Settings</span>
+                    </div>
+                  </a>
+                  <a href="../signin.html" class="noti">
+                    <div class="noti-content">
+                      <span class="icon">
+                        <img src="../images/signoutx.png" class="img-fluid">
+                      </span>
+                      <span class="text">Signout</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="quotation-wrapper">
+      <div class="content">
+        <div class="sidebar"></div>
+        <div class="quotation-steps">
+          <div class="inner-content">
+            <div class="step">
+              <div class="title">Choose your ride type</div>
+              <div class="num">1</div>
+            </div>
+            <div class="step">
+              <div class="title">Enter Destinations</div>
+              <div class="num">2</div>
+            </div>
+            <div class="step">
+              <div class="title">Vehicle Type<br> & Exra Services</div>
+              <div class="num">3</div>
+            </div>
+            <div class="step">
+              <div class="title">Passengers<br> & Luggages</div>
+              <div class="num">4</div>
+            </div>
+          </div>
+        </div>
+        <div class="quotation-box">
+          <div class="quotation-control">
+            <div class="prev-btn">
+              <button class="btn">
+                <img src="../images/icons-previous.png" alt="next" class="img-fluid">
+              </button>
+            </div>
+            <div class="next-btn">
+              <button class="btn">
+                <img src="../images/icons-next.png" alt="next" class="img-fluid">
+              </button>
+            </div>
+            <div class="generate-btn">
+              <button class="btn">Generate Quotation</button>
+            </div>
+          </div>
+          <div class="support-btn">
+            <button class="btn">
+              <img src="../images/help.png" alt="support-icon" class="img-fluid">
+              Contact Support
+            </button>
+          </div>
+          <!-- *** Start Quotation Container *** -->
+          <div class="quotation-container">
+            <!-- Start Ride type -->
+            <div class="quotation-ride">
+              <div class="inner-content">
+                <div class="heading">Choose your ride type</div>
+                <form class="form-content">
+                  <div class="inner-content heading-content d-flex">
+                    <div class="category no-select d-flex align-items-center justify-content-center" data-page="pickup">
+                      <div class="category-pic">
+                        <img class="img-fluid" src="../images/icons-ride-type-arrival.png" alt="arrival">
+                      </div>
+                      <div class="category-text">Arrival</div>
+                    </div>
+                    <div class="category no-select d-flex align-items-center justify-content-center" data-page="pickup-departure">
+                      <div class="category-pic">
+                        <img class="img-fluid" src="../images/icons-ride-type-departure.png" alt="departure">
+                      </div>
+                      <div class="category-text">Departure</div>
+                    </div>
+                    <div class="category no-select d-flex align-items-center justify-content-center" data-page="pickup-point">
+                      <div class="category-pic">
+                        <img class="img-fluid" src="../images/icons-ride-type-p-2-p.png" alt="point to point">
+                      </div>
+                      <div class="category-text">Point<br>to Point</div>
+                    </div>
+                    <div class="category no-select d-flex align-items-center justify-content-center" data-page="tour">
+                      <div class="category-pic">
+                        <img class="img-fluid" src="../images/icons-ride-type-tour.png" alt="tour">
+                      </div>
+                      <div class="category-text">Tour</div>
+                    </div>
+                    <div class="category no-select d-flex align-items-center justify-content-center" data-page="pickup-disposal">
+                      <div class="category-pic">
+                        <img class="img-fluid" src="../images/icons-ride-type-disposal.png" alt="disposal">
+                      </div>
+                      <div class="category-text">Disposal</div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- End Ride type -->
+            <!-- Start Destinations -->
+            <div class="quotation-destinations">
+              <form class="form-content">
+                <div class="inner-content d-flex">
+                  <div class="left-content">
+                    <div class="heading">
+                      <div class="title">Enter sepcific addresses on map</div>
+                      <div class="map-input row-group">
+                        <div class="start-point input-group d-flex">
+                          <div class="icon">
+                            <img src="../images/oval.png" class="img-fluid">
+                          </div>
+                          <input type="text" class="form-control" data-errormsg="Please choose starting point or click on map">
+                        </div>
+                        <div class="destination-point input-group d-flex">
+                          <div class="icon">
+                            <img src="../images/placeholder.png" class="img-fluid">
+                          </div>
+                          <input type="text" class="form-control" data-errormsg="Please choose destination">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="description-content">
+                      <div class="quick-options">
+                        <div class="title">Quick options</div>
+                        <div class="category-container">
+                          <div class="category no-select text-center">
+                            <div class="category-pic">
+                              <img class="img-fluid" src="../images/icons-pickup-schipohl-airport.png" alt="Schiphol Airport VIP CENTER">
+                            </div>
+                            <div class="category-text">Schiphol Airport <span class="highlight">VIP CENTER</span></div>
+                          </div>
+                          <div class="category no-select jet text-center">
+                            <div class="category-pic">
+                              <img class="img-fluid" src="../images/icons-pickup-jet.png" alt="Jet Avaiation Center">
+                            </div>
+                            <div class="category-text">Jet Avaiation Center</div>
+                          </div>
+                          <div class="category no-select text-center">
+                            <div class="category-pic">
+                              <img class="img-fluid" src="../images/icons-pickup-schipohl-airport.png" alt="Schiphol Airport VIP CENTER">
+                            </div>
+                            <div class="category-text">Schiphol Airport <span class="highlight">VIP CENTER</span></div>
+                          </div>
+                          <div class="category no-select jet text-center">
+                            <div class="category-pic">
+                              <img class="img-fluid" src="../images/icons-pickup-jet.png" alt="Jet Avaiation Center">
+                            </div>
+                            <div class="category-text">Jet Avaiation Center</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="trip-info">
+                        <div class="title">Trip info</div>
+                        <div class="info-container">
+                          <div class="info d-flex">
+                            <div class="car d-flex">
+                              <div class="icon">
+                                <img src="../images/sedan-car-front.png" class="img-fluid">
+                              </div>
+                              <div class="car-name">Via A4</div>
+                            </div>
+                            <div class="details">
+                              <div class="time">23 min</div>
+                              <div class="distance">12.6 km</div>
+                            </div>
+                          </div>
+                          <div class="info d-flex">
+                            <div class="car d-flex">
+                              <div class="icon">
+                                <img src="../images/sedan-car-front.png" class="img-fluid">
+                              </div>
+                              <div class="car-name">Via s106</div>
+                            </div>
+                            <div class="details">
+                              <div class="time">25 min</div>
+                              <div class="distance">12.7 km</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="right-content">
+                    <div id="map"></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- End Destinations -->
+            <!-- Start Vehicle & Exra Services -->
+            <div class="quotation-vehicle">
+              <div class="inner-content">
+                <div class="title">Vehicle Type</div>
+                <form class="form-content">
+                    <div class="row-group d-flex w-100">
+                      <div class="category no-select d-flex">
+                        <div class="vehicle-info d-flex">
+                          <div class="category-text">
+                            <div class="vehicle-title">Mercedes S Class</div>
+                            <div class="vehicle-note">Or similar</div>
+                            <div class="vehicle-price">
+                              <span class="icon"><i class="fas fa-euro-sign"></i></span>
+                              <span class="price">200</span>
+                            </div>
+                          </div>
+                          <div class="category-pic">
+                            <img src="../images/car-1.png" class="img-fluid">
+                          </div>
+                        </div>
+                        <div class="category-des d-flex">
+                          <div class="option d-flex">
+                            <span class="icon">
+                              <img src="../images/title.png" class="img-fluid">
+                            </span>
+                            <span class="passenger-num">3-4</span>
+                            <span class="text">Passengers</span>
+                          </div>
+                          <div class="option d-flex">
+                            <span class="icon">
+                              <img src="../images/icons-luggage-small.png" class="img-fluid">
+                            </span>
+                            <span class="passenger-num">2</span>
+                            <span class="text">Suitcase</span>
+                          </div>
+                          <div class="option d-flex">
+                            <span class="icon">
+                              <img src="../images/small-bag.png" class="img-fluid">
+                            </span>
+                            <span class="passenger-num">3</span>
+                            <span class="text">Small Bags</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="category no-select d-flex">
+                        <div class="vehicle-info d-flex">
+                          <div class="category-text">
+                            <div class="vehicle-title">Mercedes V Class</div>
+                            <div class="vehicle-note">Or similar</div>
+                            <div class="vehicle-price">
+                              <span class="icon"><i class="fas fa-euro-sign"></i></span>
+                              <span class="price">130</span>
+                            </div>
+                          </div>
+                          <div class="category-pic">
+                            <img src="../images/car-2.png" class="img-fluid">
+                          </div>
+                        </div>
+                        <div class="category-des d-flex">
+                          <div class="option d-flex">
+                            <span class="icon">
+                              <img src="../images/title.png" class="img-fluid">
+                            </span>
+                            <span class="passenger-num">3-4</span>
+                            <span class="text">Passengers</span>
+                          </div>
+                          <div class="option d-flex">
+                            <span class="icon">
+                              <img src="../images/icons-luggage-small.png" class="img-fluid">
+                            </span>
+                            <span class="passenger-num">2</span>
+                            <span class="text">Suitcase</span>
+                          </div>
+                          <div class="option d-flex">
+                            <span class="icon">
+                              <img src="../images/small-bag.png" class="img-fluid">
+                            </span>
+                            <span class="passenger-num">3</span>
+                            <span class="text">Small Bags</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="category no-select d-flex">
+                        <div class="vehicle-info d-flex">
+                          <div class="category-text">
+                            <div class="vehicle-title">Mercedes E Class</div>
+                            <div class="vehicle-note">Or similar</div>
+                            <div class="vehicle-price">
+                              <span class="icon"><i class="fas fa-euro-sign"></i></span>
+                              <span class="price">150</span>
+                            </div>
+                          </div>
+                          <div class="category-pic">
+                            <img src="../images/car-3.png" class="img-fluid">
+                          </div>
+                        </div>
+                        <div class="category-des d-flex">
+                          <div class="option d-flex">
+                            <span class="icon">
+                              <img src="../images/title.png" class="img-fluid">
+                            </span>
+                            <span class="passenger-num">3-4</span>
+                            <span class="text">Passengers</span>
+                          </div>
+                          <div class="option d-flex">
+                            <span class="icon">
+                              <img src="../images/icons-luggage-small.png" class="img-fluid">
+                            </span>
+                            <span class="passenger-num">2</span>
+                            <span class="text">Suitcase</span>
+                          </div>
+                          <div class="option d-flex">
+                            <span class="icon">
+                              <img src="../images/small-bag.png" class="img-fluid">
+                            </span>
+                            <span class="passenger-num">3</span>
+                            <span class="text">Small Bags</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="category no-select d-flex">
+                        <div class="vehicle-info d-flex">
+                          <div class="category-text">
+                            <div class="vehicle-title">Mercedes Sprinter</div>
+                            <div class="vehicle-note">Or similar</div>
+                            <div class="vehicle-price">
+                              <span class="icon"><i class="fas fa-euro-sign"></i></span>
+                              <span class="price">120</span>
+                            </div>
+                          </div>
+                          <div class="category-pic">
+                            <img src="../images/car-4.png" class="img-fluid">
+                          </div>
+                        </div>
+                        <div class="category-des d-flex">
+                          <div class="option d-flex">
+                            <span class="icon">
+                              <img src="../images/title.png" class="img-fluid">
+                            </span>
+                            <span class="passenger-num">3-4</span>
+                            <span class="text">Passengers</span>
+                          </div>
+                          <div class="option d-flex">
+                            <span class="icon">
+                              <img src="../images/icons-luggage-small.png" class="img-fluid">
+                            </span>
+                            <span class="passenger-num">2</span>
+                            <span class="text">Suitcase</span>
+                          </div>
+                          <div class="option d-flex">
+                            <span class="icon">
+                              <img src="../images/small-bag.png" class="img-fluid">
+                            </span>
+                            <span class="passenger-num">3</span>
+                            <span class="text">Small Bags</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </form>
+              </div>
+            </div>
+            <!-- End Vehicle & Exra Services -->
+            <!-- Start Passengers & Luggages -->
+            <div class="quotation-passengers">
+              <div class="inner-content">
+                <div class="title">Extra Services</div>
+                <form class="form-content">
+                  <div class="row-group services-group d-flex w-100">
+                    <div class="services-content">
+                      <div class="services-row d-flex">
+                        <div class="services no-select">
+                          <div class="service-title">VIP Parking airport</div>
+                          <div class="service-body d-flex">
+                            <span class="service-price d-flex">
+                              <span class="icon"><i class="fas fa-plus"></i></span>
+                              <span class="icon euro"><i class="fas fa-euro-sign"></i></span>
+                              <span class="price">30</span>
+                            </span>
+                            <span class="service-img">
+                              <img src="../images/vip-parking.png" class="img-fluid">
+                            </span>
+                          </div>
+                        </div>
+                        <div class="services no-select">
+                          <div class="service-title">Train Porter service</div>
+                          <div class="service-body d-flex">
+                            <span class="service-price d-flex">
+                              <span class="icon"><i class="fas fa-plus"></i></span>
+                              <span class="icon euro"><i class="fas fa-euro-sign"></i></span>
+                              <span class="price">10</span>
+                            </span>
+                            <span class="service-img">
+                              <img src="../images/porter-service.png" class="img-fluid">
+                            </span>
+                          </div>
+                        </div>
+                        <div class="services no-select">
+                          <div class="service-title">Baby Seat</div>
+                          <div class="service-body d-flex">
+                            <span class="service-price d-flex">
+                              <span class="icon"><i class="fas fa-plus"></i></span>
+                              <span class="icon euro"><i class="fas fa-euro-sign"></i></span>
+                              <span class="price">30</span>
+                            </span>
+                            <span class="service-img">
+                              <img src="../images/baby-seat.png" class="img-fluid">
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="services-row d-flex">
+                        <div class="services no-select">
+                          <div class="service-title">Toddler Seat</div>
+                          <div class="service-body d-flex">
+                            <span class="service-price d-flex">
+                              <span class="icon"><i class="fas fa-plus"></i></span>
+                              <span class="icon euro"><i class="fas fa-euro-sign"></i></span>
+                              <span class="price">30</span>
+                            </span>
+                            <span class="service-img">
+                              <img src="../images/toddler.png" class="img-fluid">
+                            </span>
+                          </div>
+                        </div>
+                        <div class="services no-select">
+                          <div class="service-title">Booster Seat</div>
+                          <div class="service-body d-flex">
+                            <span class="service-price d-flex">
+                              <span class="icon"><i class="fas fa-plus"></i></span>
+                              <span class="icon euro"><i class="fas fa-euro-sign"></i></span>
+                              <span class="price">30</span>
+                            </span>
+                            <span class="service-img">
+                              <img src="../images/booster.png" class="img-fluid">
+                            </span>
+                          </div>
+                        </div>
+                        <div class="services no-select">
+                          <div class="service-title">Meet & Greet Schiphol Airport</div>
+                          <div class="service-body d-flex">
+                            <span class="service-price d-flex">
+                              <span class="icon"><i class="fas fa-plus"></i></span>
+                              <span class="icon euro"><i class="fas fa-euro-sign"></i></span>
+                              <span class="price">30</span>
+                            </span>
+                            <span class="service-img">
+                              <img src="../images/meet.png" class="img-fluid">
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row-group luggage-group d-flex w-100">
+                    <div class="luggage-content">
+                      <div class="title">Passengers</div>
+                      <div class="input-group">
+                        <label class="d-flex align-items-center">
+                          <span class="icon"><img src="../images/small.png" alt="customer" class="img-fluid"></span>
+                          <span class="text">Number of passengers</span>
+                        </label>
+                        <div class="inner-group add-minus-input">
+                          <div class="minus">
+                            <span class="minus-icon"><i class="fas fa-minus"></i></span>
+                          </div>
+                          <div class="luggage-num">
+                            <input type="text" id="luggage-num" class="optional" readonly>
+                          </div>
+                          <div class="plus">
+                            <span class="plus-icon"><i class="fas fa-plus"></i></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="luggage-content">
+                      <div class="title">Luggage Type</div>
+                      <div class="luggage-inner">
+                        <div class="input-group">
+                          <label class="d-flex align-items-center">
+                            <span class="icon"><img src="../images/icons-luggage-small.png" alt="customer" class="img-fluid"></span>
+                            <span class="text">Carry on luggage</span>
+                          </label>
+                          <div class="inner-group add-minus-input">
+                            <div class="minus">
+                              <span class="minus-icon"><i class="fas fa-minus"></i></span>
+                            </div>
+                            <div class="luggage-num">
+                              <input type="text" id="luggage-num" class="optional" readonly>
+                            </div>
+                            <div class="plus">
+                              <span class="plus-icon"><i class="fas fa-plus"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="input-group">
+                          <label class="d-flex align-items-center">
+                            <span class="icon"><img src="../images/icons-luggage-large.png" alt="customer" class="img-fluid"></span>
+                            <span class="text">Checked luggage</span>
+                          </label>
+                          <div class="inner-group add-minus-input">
+                            <div class="minus">
+                              <span class="minus-icon"><i class="fas fa-minus"></i></span>
+                            </div>
+                            <div class="luggage-num">
+                              <input type="text" id="luggage-num" class="optional" readonly>
+                            </div>
+                            <div class="plus">
+                              <span class="plus-icon"><i class="fas fa-plus"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- End Passengers & Luggages -->
+            <!-- Start Quotation final -->
+            <div class="quotation-final">
+              <div class="inner-content">
+                <div class="heading">
+                  <div class="title">Quotation</div>
+                  <div class="details">
+                    <div class="info">
+                      <div class="info-title">Quotation number</div>
+                      <div class="info-data">1200D24</div>
+                    </div>
+                    <div class="info">
+                      <div class="info-title">Recipent</div>
+                      <div class="info-data">Mohamed Emad</div>
+                      <div class="info-data">M.Emad@gmail.com</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="inner-body">
+                  <div class="row-data">
+                    <div class="data-title">Ride Type</div>
+                    <div class="data-data">Arrival</div>
+                  </div>
+                  <div class="row-data">
+                    <div class="data-title">Pickup</div>
+                    <div class="data-data">Shiphol Airport</div>
+                  </div>
+                  <div class="row-data">
+                    <div class="data-title">Drop off</div>
+                    <div class="data-data">Conservaturiom Hotel</div>
+                  </div>
+                  <div class="row-data">
+                    <div class="data-title">Trip info</div>
+                    <div class="data-data">20 km , 1 hr</div>
+                  </div>
+                  <div class="row-data">
+                    <div class="data-title">Vehicle Type</div>
+                    <div class="data-data">Mercedes Benz</div>
+                  </div>
+                  <div class="row-data">
+                    <div class="data-title">Extra Service</div>
+                    <div class="data-data">Toddler Seat</div>
+                  </div>
+                  <div class="row-data">
+                    <div class="data-title">Passengers</div>
+                    <div class="data-data">3</div>
+                  </div>
+                  <div class="row-data">
+                    <div class="data-title">Luggages</div>
+                    <div class="data-data">2 handbag</div>
+                  </div>
+                  <div class="row-tools">
+                    <div class="data-price">
+                      <div class="data-title">Total Price</div>
+                      <div class="price">$120</div>
+                    </div>
+                    <div class="data-print">
+                      <button class="btn pdf-btn">
+                        <img src="../images/pdf-file-format-symbol.png" alt="pdf-icon" class="img-fluid">
+                      </button>
+                      <button class="btn print-btn">
+                        <img src="../images/printing-tool.png" alt="print-icon" class="img-fluid">
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Quotation final -->
+          </div>
+          <!-- *** End Quotation Container *** -->
+        </div>
+      </div>
+    </section>
+  <!-- ====== Start Scripts ====== -->
+  <!-- FontAwesome v5.7.2 -->
+  <!--<script src="js/all.min.js"></script>-->
+  <!-- Main js file -->
+  <script>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 52.370216, lng: 4.895168},
+        zoom: 12
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvZABePrd0RMYwLEJVYZXM24xQYcRpNTo&callback=initMap" async defer></script>
+  <script src="../js/main.js"></script>
+  </body>
+  <!-- End body -->
+</html>

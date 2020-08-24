@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Start head -->
+  <head>
+    <!-- Start Meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="conservatorium Booking">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="conservatorium Booking">
+    <meta name="author" content="John Doe">
+    <!-- Start title -->
+    <title>Settings</title>
+    <!-- Start links -->
+    <!-- IE Support -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <[end if]-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- FontAwesome v5.7.2 -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- Bootstrap v4.2.1 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <!-- End head -->
+  <!-- Start body -->
+  <body class="user-settings">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">
+          <img class="img-fluid" src="../images/icons-nav-bar-logo.png" alt="CONSERVATORIUM">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+          <spand class="navbar-toggler-icon"></spand>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar-links">
+          <ul class="navbar-nav links col-md-7 col-12 justify-content-end align-items-center">
+            <li class="nav-item"><a href="../booking/" class="nav-link">Add New Booking</a></li>
+            <li class="nav-item"><a href="../dashboard/" class="nav-link">My Bookings</a></li>
+            <li class="nav-item"><a href="../quotation/" class="nav-link">Request a Quotation</a></li>
+          </ul>
+          <ul class="navbar-nav settings col-md-5 col-12 justify-content-end align-items-center">
+            <li class="nav-item">
+              <div class="search-input">
+                <input type="text" class="form-control" placeholder="Search all the content">
+                <span class="icon"><img src="../images/search.png" alt="search" class="img-fluid"></span>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="messages">
+                <num class="msg-num">2</num>
+                <div class="messages-icon">
+                  <img src="../images/conversation.png" alt="messages" class="img-fluid">
+                </div>
+                <div class="msg-list dropdown-list">
+                  <div class="msg">
+                    <div class="msg-pic">
+                      <img src="../images/member-img.jpg" class="img-fluid">
+                    </div>
+                    <div class="msg-txt">
+                      <div class="msg-member-name">Dave K.</div>
+                      <div class="txt">You look awesome!</div>
+                    </div>
+                  </div>
+                  <div class="msg">
+                    <div class="msg-pic">
+                      <img src="../images/booked.jpg" class="img-fluid">
+                    </div>
+                    <div class="msg-txt">
+                      <div class="msg-member-name">Mohamed E.</div>
+                      <div class="txt">Lorem ipsum is placeholder te....</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li> 
+            <li class="nav-item">
+              <div class="member d-flex align-items-center">
+                <div class="member-pic">
+                  <img src="../images/member-img.jpg" alt="Dave" class="img-fluid">
+                </div>
+                <div class="notifications-list dropdown-list">
+                  <a href="../user/" class="noti">
+                    <div class="noti-content">
+                      <span class="icon">
+                        <img src="../images/my-profilex.png" class="img-fluid">
+                      </span>
+                      <span class="text">System Settings</span>
+                    </div>
+                  </a>
+                  <a href="../signin.html" class="noti">
+                    <div class="noti-content">
+                      <span class="icon">
+                        <img src="../images/signoutx.png" class="img-fluid">
+                      </span>
+                      <span class="text">Signout</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="settings-section">
+      <div class="container-fluid">
+        <div class="inner-content">
+          <div class="heading">
+            <h3>Settings</h3>
+          </div>
+          <div class="settings-navigation position-relative">
+            <div class="navi-line"></div>
+            <div class="navigation-content d-flex">
+              <div class="navi-item no-select">
+                <div class="title">Profile</div>
+              </div>
+              <div class="navi-item no-select">
+                <div class="title">Company</div>
+              </div>
+              <div class="navi-item no-select">
+                <div class="title">System preferences</div>
+              </div>
+              <div class="navi-item no-select">
+                <div class="title">Locations</div>
+              </div>
+              <div class="navi-item no-select">
+                <div class="title">Routes</div>
+              </div>
+              <div class="navi-item no-select">
+                <div class="title">Passengers</div>
+              </div>
+              <div class="navi-item no-select">
+                <div class="title">Notifications</div>
+              </div>
+            </div>
+          </div>
+          <div class="settings-body">
+            <!-- Start Profile Settings -->
+            <div class="profile-settings">
+              <div class="settings-content">
+                <div class="top-title">BASICS</div>
+                <div class="inner-settings">
+                  <div class="row-settings d-flex">
+                    <div class="title">Personal photo</div>
+                    <div class="data d-flex">
+                      <div class="pic">
+                        <img src="../images/member-img.jpg" alt="user pic" class="img-fluid">
+                      </div>
+                      <div class="control">
+                        <div class="change-pic-container">
+                          <input type="file" class="placeholder-btn">
+                          <button type="button" class="btn upload-btn">Change</button>
+                        </div>
+                        <button type="button" class="btn delete-pic">Delete</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row-settings d-flex">
+                    <div class="title">Title</div>
+                    <div class="data d-flex">
+                      <div class="txt-field">  
+                        <div class="txt">Mr</div>
+                      </div>
+                      <button type="button" class="btn single-popup">Edit</button>
+                    </div>
+                    <div class="popup-container">
+                      <form>
+                        <div class="box single-popup-box">
+                          <div class="heading-box">
+                            <div class="title-box">Change title</div>
+                            <div class="close-icon"><i class="fas fa-times"></i></div>
+                          </div>
+                          <div class="input-container">
+                            <div class="dropdown-txt">
+                              <input type="text" class="form-control" placeholder="Title">
+                              <div class="dropdown-list-popup">
+                                <div class="item-popup">Mr</div>
+                                <div class="item-popup">Ms</div>
+                                <div class="item-popup">Mrs</div>
+                                <div class="item-popup">Dr</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="popup-control">
+                            <button class="btn cancel-popup" type="button">Cancel</button>
+                            <button class="btn save-popup" type="button">Save Updates</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="row-settings d-flex">
+                    <div class="title">Name</div>
+                    <div class="data d-flex">
+                      <div class="txt-field">
+                        <div class="txt separate-txt">Dave Kuiprus</div>
+                      </div>
+                      <button type="button" class="btn single-popup">Edit</button>
+                    </div>
+                    <div class="popup-container">
+                      <form>
+                        <div class="box single-popup-box">
+                          <div class="heading-box">
+                            <div class="title-box">Change your name</div>
+                            <div class="close-icon"><i class="fas fa-times"></i></div>
+                          </div>
+                          <div class="input-container txt-fields">
+                            <input type="text" class="form-control input-txt" placeholder="First name">
+                            <input type="text" class="form-control input-txt" placeholder="Last name">
+                          </div>
+                          <div class="popup-control">
+                            <button class="btn cancel-popup" type="button">Cancel</button>
+                            <button class="btn save-popup" type="button">Save Updates</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="row-settings d-flex">
+                    <div class="title">Email</div>
+                    <div class="data d-flex">
+                      <div class="txt-field">
+                        <div class="txt">D.kuiprus@sclsv.com</div>
+                      </div>
+                      <button type="button" class="btn single-popup">Edit</button>
+                    </div>
+                    <div class="popup-container">
+                      <form>
+                        <div class="box single-popup-box">
+                          <div class="heading-box">
+                            <div class="title-box">Change your email</div>
+                            <div class="close-icon"><i class="fas fa-times"></i></div>
+                          </div>
+                          <div class="input-container">
+                            <input type="text" class="form-control input-txt" placeholder="Email">
+                          </div>
+                          <div class="popup-control">
+                            <button class="btn cancel-popup" type="button">Cancel</button>
+                            <button class="btn save-popup" type="button">Save Updates</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="row-settings d-flex">
+                    <div class="title">Phone number</div>
+                    <div class="data d-flex">
+                      <div class="txt-field phone-field d-flex align-items-center">
+                        <div class="phone d-flex align-items-center">
+                          <div class="icon">
+                            <img src="../images/britain.jpg" class="img-fluid">
+                          </div>
+                          <div class="code txt2">+31</div>
+                        </div>
+                        <div class="txt">01069578145</div>
+                      </div>
+                      <button type="button" class="btn single-popup">Edit</button>
+                    </div>
+                    <div class="popup-container">
+                      <form>
+                        <div class="box single-popup-box">
+                          <div class="heading-box">
+                            <div class="title-box">Change your phone number</div>
+                            <div class="close-icon"><i class="fas fa-times"></i></div>
+                          </div>
+                          <div class="input-container">
+                            <div class="dropdown-txt space-bottom">
+                              <input type="text" class="form-control input-txt2" placeholder="Country code">
+                              <div class="dropdown-list-popup">
+                                <div class="item-popup d-flex">
+                                  <div class="icon">
+                                    <img class="img-fluid" src="../images/britain.jpg" alt="Britain">
+                                  </div>
+                                  <div class="item-popup-txt">+31</div>
+                                </div>
+                                <div class="item-popup d-flex">
+                                  <div class="icon">
+                                    <img class="img-fluid" src="../images/france.jpg" alt="Britain">
+                                  </div>
+                                  <div class="item-popup-txt">+20</div>
+                                </div>
+                                <div class="item-popup d-flex">
+                                  <div class="icon">
+                                    <img class="img-fluid" src="../images/germany.jpg" alt="Britain">
+                                  </div>
+                                  <div class="item-popup-txt">+10</div>
+                                </div>
+                              </div>
+                            </div>
+                            <input type="number" class="form-control input-txt" placeholder="Phone number">
+                          </div>
+                          <div class="popup-control">
+                            <button class="btn cancel-popup" type="button">Cancel</button>
+                            <button class="btn save-popup" type="button">Save Updates</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Profile Settings -->
+            <!-- Start Company Settings -->
+            <div class="company-settings">
+              <div class="settings-content">
+                <div class="top-title">BASICS</div>
+                <div class="inner-settings">
+                  <div class="row-settings d-flex">
+                    <div class="title">Company Logo</div>
+                    <div class="data d-flex">
+                      <div class="pic">
+                        <img src="../images/gold-logo.png" alt="company pic" class="img-fluid">
+                      </div>
+                      <div class="control">
+                        <div class="change-pic-container">
+                          <input type="file" class="placeholder-btn">
+                          <button type="button" class="btn upload-btn">Change</button>
+                        </div>
+                        <button type="button" class="btn delete-pic">Delete</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row-settings d-flex">
+                    <div class="title">Company Name</div>
+                    <div class="data d-flex">
+                      <div class="txt-field">
+                        <div class="txt">SCLSV Limousine Services</div>
+                      </div>
+                      <button type="button" class="btn single-popup">Edit</button>
+                    </div>
+                    <div class="popup-container">
+                      <form>
+                        <div class="box single-popup-box">
+                          <div class="heading-box">
+                            <div class="title-box">Change company name</div>
+                            <div class="close-icon"><i class="fas fa-times"></i></div>
+                          </div>
+                          <div class="input-container">
+                            <input type="text" class="form-control input-txt" placeholder="Company name">
+                          </div>
+                          <div class="popup-control">
+                            <button class="btn cancel-popup" type="button">Cancel</button>
+                            <button class="btn save-popup" type="button">Save Updates</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="settings-content">
+                <div class="top-title">CONTACT INFO</div>
+                <div class="inner-settings">
+                  <div class="row-settings d-flex">
+                    <div class="title">Address</div>
+                    <div class="data d-flex">
+                      <div class="txt-field">
+                        <div class="txt">24 Sakr Koresh Blocks , Masaken Sheraton</div>
+                      </div>
+                      <button type="button" class="btn single-popup">Edit</button>
+                    </div>
+                    <div class="popup-container">
+                      <form>
+                        <div class="box single-popup-box">
+                          <div class="heading-box">
+                            <div class="title-box">Change your address</div>
+                            <div class="close-icon"><i class="fas fa-times"></i></div>
+                          </div>
+                          <div class="input-container">
+                            <input type="text" class="form-control input-txt" placeholder="Address">
+                          </div>
+                          <div class="popup-control">
+                            <button class="btn cancel-popup" type="button">Cancel</button>
+                            <button class="btn save-popup" type="button">Save Updates</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="row-settings d-flex">
+                    <div class="title">BTW Number</div>
+                    <div class="data d-flex">
+                      <div class="txt-field phone-field d-flex align-items-center">
+                        <div class="phone d-flex align-items-center">
+                          <div class="icon">
+                            <img src="../images/britain.jpg" class="img-fluid">
+                          </div>
+                          <div class="code txt2">+31</div>
+                        </div>
+                        <div class="txt">01069578145</div>
+                      </div>
+                      <button type="button" class="btn single-popup">Edit</button>
+                    </div>
+                    <div class="popup-container">
+                      <form>
+                        <div class="box single-popup-box">
+                          <div class="heading-box">
+                            <div class="title-box">Change your BTW Number</div>
+                            <div class="close-icon"><i class="fas fa-times"></i></div>
+                          </div>
+                          <div class="input-container">
+                            <div class="dropdown-txt space-bottom">
+                              <input type="text" class="form-control input-txt2" placeholder="Country code">
+                              <div class="dropdown-list-popup">
+                                <div class="item-popup d-flex">
+                                  <div class="icon">
+                                    <img class="img-fluid" src="../images/britain.jpg" alt="Britain">
+                                  </div>
+                                  <div class="item-popup-txt">+31</div>
+                                </div>
+                                <div class="item-popup d-flex">
+                                  <div class="icon">
+                                    <img class="img-fluid" src="../images/france.jpg" alt="Britain">
+                                  </div>
+                                  <div class="item-popup-txt">+20</div>
+                                </div>
+                                <div class="item-popup d-flex">
+                                  <div class="icon">
+                                    <img class="img-fluid" src="../images/germany.jpg" alt="Britain">
+                                  </div>
+                                  <div class="item-popup-txt">+10</div>
+                                </div>
+                              </div>
+                            </div>
+                            <input type="number" class="form-control input-txt" placeholder="BTW Number">
+                          </div>
+                          <div class="popup-control">
+                            <button class="btn cancel-popup" type="button">Cancel</button>
+                            <button class="btn save-popup" type="button">Save Updates</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="row-settings d-flex">
+                    <div class="title">Kvk Number</div>
+                    <div class="data d-flex">
+                      <div class="txt-field phone-field d-flex align-items-center">
+                        <div class="phone d-flex align-items-center">
+                          <div class="icon">
+                            <img src="../images/britain.jpg" class="img-fluid">
+                          </div>
+                          <div class="code txt2">+31</div>
+                        </div>
+                        <div class="txt">01069578145</div>
+                      </div>
+                      <button type="button" class="btn single-popup">Edit</button>
+                    </div>
+                    <div class="popup-container">
+                      <form>
+                        <div class="box single-popup-box">
+                          <div class="heading-box">
+                            <div class="title-box">Change your Kvk Number</div>
+                            <div class="close-icon"><i class="fas fa-times"></i></div>
+                          </div>
+                          <div class="input-container">
+                            <div class="dropdown-txt space-bottom">
+                              <input type="text" class="form-control input-txt2" placeholder="Country code">
+                              <div class="dropdown-list-popup">
+                                <div class="item-popup d-flex">
+                                  <div class="icon">
+                                    <img class="img-fluid" src="../images/britain.jpg" alt="Britain">
+                                  </div>
+                                  <div class="item-popup-txt">+31</div>
+                                </div>
+                                <div class="item-popup d-flex">
+                                  <div class="icon">
+                                    <img class="img-fluid" src="../images/france.jpg" alt="Britain">
+                                  </div>
+                                  <div class="item-popup-txt">+20</div>
+                                </div>
+                                <div class="item-popup d-flex">
+                                  <div class="icon">
+                                    <img class="img-fluid" src="../images/germany.jpg" alt="Britain">
+                                  </div>
+                                  <div class="item-popup-txt">+10</div>
+                                </div>
+                              </div>
+                            </div>
+                            <input type="number" class="form-control input-txt" placeholder="Kvk Number">
+                          </div>
+                          <div class="popup-control">
+                            <button class="btn cancel-popup" type="button">Cancel</button>
+                            <button class="btn save-popup" type="button">Save Updates</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Company Settings -->
+            <!-- Start System preferences Settings -->
+            <div class="system-preferences-settings"></div>
+            <!-- End System preferences Settings -->
+            <!-- Start Locations Settings -->
+            <div class="locations-settings">
+              <div class="settings-content location-body">
+                <div class="heading-control main-popup-container d-flex align-items-center">
+                  <div class="search-input position-relative">
+                    <input type="search" class="form-control" placeholder="Search all Locations">
+                    <div class="icon d-block position-absolute">
+                      <i class="fas fa-search"></i>
+                    </div>
+                  </div>
+                  <div class="add-btn">
+                    <button class="btn" type="button">
+                      <img src="../images/add.png" class="img-fluid">
+                      ADD NEW LOCATION
+                    </button>
+                  </div>
+                  <div class="popup-container main-popup add-popup">
+                    <form class="big-form">
+                      <div class="box big-box">
+                        <div class="heading-box">
+                          <div class="title-box">Add New Location</div>
+                          <div class="close-icon"><i class="fas fa-times"></i></div>
+                        </div>
+                        <div class="main-popup-content">
+                          <div class="row-edit d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Short cut name</div>
+                              <div class="btn-container">
+                                <button class="btn popup-btn" type="button">Enter short cut name</button>
+                              </div>
+                            </div>
+                            <div class="popup-container">
+                              <div class="box">
+                                <div class="heading-box">
+                                  <div class="title-box">Add short cut name</div>
+                                  <div class="close-icon"><i class="fas fa-times"></i></div>
+                                </div>
+                                <div class="input-container data-txt">
+                                  <input type="text" class="form-control input-txt" placeholder="Short cut name">
+                                </div>
+                                <div class="popup-control">
+                                  <button class="btn cancel-popup" type="button">Cancel</button>
+                                  <button class="btn save-popup" type="button">Add</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row-edit d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Address</div>
+                              <div class="btn-container">
+                                <button class="btn popup-btn" type="button">Enter Address</button>
+                              </div>
+                            </div>
+                            <div class="popup-container map-popup">
+                              <div class="box">
+                                <div class="heading-box">
+                                  <div class="title-box">Enter Address</div>
+                                  <div class="close-icon"><i class="fas fa-times"></i></div>
+                                </div>
+                                <div class="input-container data-txt">
+                                  <input type="text" class="form-control input-txt" placeholder="Enter Address Details or pick on maps">
+                                  <div class="map"></div>
+                                </div>
+                                <div class="popup-control">
+                                  <button class="btn cancel-popup" type="button">Cancel</button>
+                                  <button class="btn save-popup" type="button">Add</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row-edit d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Notes</div>
+                              <div class="btn-container">
+                                <button class="btn popup-btn" type="button">Enter notes</button>
+                              </div>
+                            </div>
+                            <div class="popup-container">
+                              <div class="box">
+                                <div class="heading-box">
+                                  <div class="title-box">Enter notes</div>
+                                  <div class="close-icon"><i class="fas fa-times"></i></div>
+                                </div>
+                                <div class="input-container data-txt">
+                                  <input type="text" class="form-control input-txt" placeholder="Notes">
+                                </div>
+                                <div class="popup-control">
+                                  <button class="btn cancel-popup" type="button">Cancel</button>
+                                  <button class="btn save-popup" type="button">Add</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row-edit d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">location photo</div>
+                              <div class="btn-container">
+                                <button class="btn upload-btn" type="button">Upload location photo</button>
+                                <input type="file" class="placeholder-btn optional">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="popup-control">
+                          <button class="btn cancel-popup" type="button">Cancel</button>
+                          <button class="btn save-add" type="button">Add</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="main-body main-popup-container">
+                  <div class="location-table">
+                    <div class="heading-top-heading d-flex">
+                      <div class="heading-title">Shortcut name</div>
+                      <div class="heading-title">Address</div>
+                      <div class="heading-title">Notes</div>
+                      <div class="heading-title">Form button</div>
+                      <div class="heading-title">Actions</div>
+                    </div>
+                    <div class="location-data-container row-data-container">
+                      <div class="location-data-body row-data-body" form-btn="Jet Avaiation Center">
+                        <div class="data-location data-txt">The Rijksmuseum</div>
+                        <div class="data-location data-txt">Museumstraat 1, 1071 XX Amsterdam</div>
+                        <div class="data-location data-txt">Jet Avaiation Center bla bla bla note of maximum ...</div>
+                        <div class="data-location">
+                          <div class="icon"><img src="../images/check-mark-location.png" class="img-fluid"></div>
+                        </div>
+                        <div class="data-location">
+                          <button class="btn edit-btn" type="button">Edit</button>
+                        </div>
+                      </div>
+                      <div class="location-data-body row-data-body">
+                        <div class="data-location data-txt">Anne Frank Museum</div>
+                        <div class="data-location data-txt">Prinsengracht 263-267, 1016 GV Amsterdam</div>
+                        <div class="data-location data-txt">Schiphol Airport VIP CENTER bla bla bla note of maximum ...</div>
+                        <div class="data-location">
+                          <div class="icon"><img src="../images/close-location.png" class="img-fluid"></div>
+                        </div>
+                        <div class="data-location">
+                          <button class="btn edit-btn" type="button">Edit</button>
+                        </div>
+                      </div>
+                      <div class="location-data-body row-data-body" form-btn="Schiphol Airport VIP CENTER">
+                        <div class="data-location data-txt">Van Gogh Museum</div>
+                        <div class="data-location data-txt">Museumplein 6, 1071 DJ, Amsterdam</div>
+                        <div class="data-location data-txt">Schiphol Airport VIP CENTER bla bla bla note of maximum ...</div>
+                        <div class="data-location">
+                          <div class="icon"><img src="../images/check-mark-location.png" class="img-fluid"></div>
+                        </div>
+                        <div class="data-location">
+                          <button class="btn edit-btn" type="button">Edit</button>
+                        </div>
+                      </div>
+                      <div class="location-data-body row-data-body" form-btn="Schiphol Airport">
+                        <div class="data-location data-txt">Jordaan (neighborhood)</div>
+                        <div class="data-location data-txt">The Jordaan</div>
+                        <div class="data-location data-txt">Schiphol Airport bla bla bla note of maximum ...</div>
+                        <div class="data-location">
+                          <div class="icon"><img src="../images/check-mark-location.png" class="img-fluid"></div>
+                        </div>
+                        <div class="data-location">
+                          <button class="btn edit-btn" type="button">Edit</button>
+                        </div>
+                      </div>
+                      <div class="location-data-body row-data-body" form-btn="Jet Avaiation Center">
+                        <div class="data-location data-txt">Vondelpark</div>
+                        <div class="data-location data-txt">Vondelpark occupies 116 acres</div>
+                        <div class="data-location data-txt">Jet Avaiation Center bla bla bla note of maximum ...</div>
+                        <div class="data-location">
+                          <div class="icon"><img src="../images/check-mark-location.png" class="img-fluid"></div>
+                        </div>
+                        <div class="data-location">
+                          <button class="btn edit-btn" type="button">Edit</button>
+                        </div>
+                      </div>
+                      <div class="location-data-body row-data-body" form-btn="Schiphol Airport VIP CENTER">
+                        <div class="data-location data-txt">The Royal Palace</div>
+                        <div class="data-location data-txt">Dam, Amsterdam</div>
+                        <div class="data-location data-txt">Schiphol Airport VIP CENTER bla bla bla note of maximum ...</div>
+                        <div class="data-location">
+                          <div class="icon"><img src="../images/check-mark-location.png" class="img-fluid"></div>
+                        </div>
+                        <div class="data-location">
+                          <button class="btn edit-btn" type="button">Edit</button>
+                        </div>
+                      </div>
+                      <div class="location-data-body row-data-body" form-btn="Schiphol Airport">
+                        <div class="data-location data-txt">Rembrandt House Museum</div>
+                        <div class="data-location data-txt">odenbreestraat 4, 1011 NK Amsterdam</div>
+                        <div class="data-location data-txt">Schiphol Airport bla bla bla note of maximum ...</div>
+                        <div class="data-location">
+                          <div class="icon"><img src="../images/check-mark-location.png" class="img-fluid"></div>
+                        </div>
+                        <div class="data-location">
+                          <button class="btn edit-btn" type="button">Edit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="location-btn-control">
+                    <div class="title-top text-left">My Form Buttons</div>
+                    <div class="location-control">
+                      <div class="btn-row d-flex align-items-center" form-btn="Jet Avaiation Center">
+                        <div class="btn-box no-select d-flex align-items-center justify-content-center flex-wrap">
+                          <div class="btn-box-pic">
+                            <img src="../images/icons-pickup-jet.png" class="img-fluid">
+                          </div>
+                          <div class="btn-box-title">Jet Avaiation Center</div>
+                        </div>
+                        <div class="delete-icon">
+                          <img src="../images/delete-button.png" class="img-fluid">
+                        </div>
+                      </div>
+                      <div class="btn-row d-flex align-items-center" form-btn="Schiphol Airport VIP CENTER">
+                        <div class="btn-box no-select d-flex align-items-center justify-content-center flex-wrap">
+                          <div class="btn-box-pic">
+                            <img src="../images/icons-pickup-schipohl-airport.png" class="img-fluid">
+                          </div>
+                          <div class="btn-box-title">Schiphol Airport <span class="highlight">VIP CENTER</span></div>
+                        </div>
+                        <div class="delete-icon">
+                          <img src="../images/delete-button.png" class="img-fluid">
+                        </div>
+                      </div>
+                      <div class="btn-row d-flex align-items-center" form-btn="Schiphol Airport">
+                        <div class="btn-box no-select d-flex align-items-center justify-content-center flex-wrap">
+                          <div class="btn-box-pic">
+                            <img src="../images/icons-pickup-schipohl-airport.png" class="img-fluid">
+                          </div>
+                          <div class="btn-box-title">Schiphol Airport</div>
+                        </div>
+                        <div class="delete-icon">
+                          <img src="../images/delete-button.png" class="img-fluid">
+                        </div>
+                      </div>
+                      <div class="btn-row d-flex align-items-center" form-btn="Jet Avaiation Center">
+                        <div class="btn-box no-select d-flex align-items-center justify-content-center flex-wrap">
+                          <div class="btn-box-pic">
+                            <img src="../images/icons-pickup-jet.png" class="img-fluid">
+                          </div>
+                          <div class="btn-box-title">Jet Avaiation Center</div>
+                        </div>
+                        <div class="delete-icon">
+                          <img src="../images/delete-button.png" class="img-fluid">
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn reset-btn" type="button">Reset to Default</button>
+                  </div>
+                  <div class="popup-container main-popup">
+                    <form class="big-form">
+                      <div class="box big-box">
+                        <div class="heading-box">
+                          <div class="title-box">Edit Location</div>
+                          <div class="close-icon"><i class="fas fa-times"></i></div>
+                        </div>
+                        <div class="main-popup-content">
+                          <div class="row-edit data-txt d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Short cut name</div>
+                              <div class="btn-container d-flex justify-content-end">
+                                <div class="txt">Shi</div>
+                                <button class="btn popup-btn" type="button">Edit</button>
+                              </div>
+                            </div>
+                            <div class="popup-container">
+                              <div class="box">
+                                <div class="heading-box">
+                                  <div class="title-box">Change short cut name</div>
+                                  <div class="close-icon"><i class="fas fa-times"></i></div>
+                                </div>
+                                <div class="input-container">
+                                  <input type="text" class="form-control input-txt" placeholder="Short cut name">
+                                </div>
+                                <div class="popup-control">
+                                  <button class="btn cancel-popup" type="button">Cancel</button>
+                                  <button class="btn save-popup" type="button">Save Updates</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row-edit data-txt d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Address</div>
+                              <div class="btn-container d-flex justify-content-end show-txt">
+                                <div class="txt">24 Sakr Koresh Blocks - Sheraton</div>
+                                <button class="btn popup-btn" type="button">Edit</button>
+                              </div>
+                            </div>
+                            <div class="popup-container map-popup">
+                              <div class="box">
+                                <div class="heading-box">
+                                  <div class="title-box">Enter Address</div>
+                                  <div class="close-icon"><i class="fas fa-times"></i></div>
+                                </div>
+                                <div class="input-container">
+                                  <input type="text" class="form-control input-txt" placeholder="Enter Address Details or pick on maps">
+                                  <div class="map"></div>
+                                </div>
+                                <div class="popup-control">
+                                  <button class="btn cancel-popup" type="button">Cancel</button>
+                                  <button class="btn save-popup" type="button">Add</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row-edit data-txt d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Notes</div>
+                              <div class="btn-container d-flex justify-content-end">
+                                <div class="txt">Bla bla text for a note about htis location if needed this can take max of let’s say 25 words</div>
+                                <button class="btn popup-btn" type="button">Edit</button>
+                              </div>
+                            </div>
+                            <div class="popup-container">
+                              <div class="box">
+                                <div class="heading-box">
+                                  <div class="title-box">Change notes</div>
+                                  <div class="close-icon"><i class="fas fa-times"></i></div>
+                                </div>
+                                <div class="input-container">
+                                  <input type="text" class="form-control input-txt" placeholder="Notes">
+                                </div>
+                                <div class="popup-control">
+                                  <button class="btn cancel-popup" type="button">Cancel</button>
+                                  <button class="btn save-popup" type="button">Save Updates</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row-edit d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">location photo</div>
+                              <div class="btn-container d-flex justify-content-end align-items-center">
+                                <div class="pic">
+                                  <img src="../images/tour-amsterdam2.jpg" alt="location picture" class="img-fluid">
+                                </div>
+                                <div class="change-pic-container">
+                                  <input type="file" class="placeholder-btn">
+                                  <button class="btn upload-btn" type="button">Change</button>
+                                </div>
+                                <button class="btn delete-pic" type="button">Delete</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row-edit d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Want to delete this location?</div>
+                              <div class="btn-container">
+                                <button class="btn delete-data" type="button">Delete Location</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="popup-control">
+                          <button class="btn cancel-popup" type="button">Cancel</button>
+                          <button class="btn save-popup main-btn" type="button">Save Updates</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Locations Settings -->
+            <!-- Start Routes Settings -->
+            <div class="routes-settings">
+              <div class="settings-content">
+                <div class="heading-control main-popup-container d-flex align-items-center">
+                  <div class="search-input position-relative">
+                    <input type="search" class="form-control" placeholder="Search all Routes">
+                    <div class="icon d-block position-absolute">
+                      <i class="fas fa-search"></i>
+                    </div>
+                  </div>
+                  <div class="add-btn">
+                    <button class="btn" type="button">
+                      <img src="../images/add.png" class="img-fluid">
+                      ADD NEW ROUTE
+                    </button>
+                  </div>
+                  <div class="popup-container map-popup add-popup light-data">
+                    <form class="big-form">
+                      <div class="box big-box">
+                        <div class="heading-box">
+                          <div class="title-box">Add New Route</div>
+                          <div class="close-icon"><i class="fas fa-times"></i></div>
+                        </div>
+                        <div class="input-container data-txt">
+                          <input type="text" class="form-control" placeholder="Add New Route">
+                          <div class="input-icon-group">
+                            <div class="input-icon">
+                              <div class="icon">
+                                <img src="../images/oval.png" class="img-fluid">
+                              </div>
+                              <input type="text" class="form-control" placeholder="Choose starting point or click on map">
+                            </div>
+                            <div class="input-icon">
+                              <div class="icon">
+                                <img src="../images/placeholder.png" class="img-fluid">
+                              </div>
+                              <input type="text" class="form-control" placeholder="Choose destination">
+                            </div>
+                          </div>
+                          <div class="map"></div>
+                        </div>
+                        <div class="popup-control">
+                          <button class="btn cancel-popup" type="button">Cancel</button>
+                          <button class="btn save-add" type="button">Add</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="main-body">
+                  <div class="heading-top-heading d-flex">
+                    <div class="heading-title">Route name</div>
+                    <div class="heading-title">Start Location</div>
+                    <div class="heading-title">End Location</div>
+                    <div class="heading-title">Duration</div>
+                    <div class="heading-title">Distance</div>
+                    <div class="heading-title">Map</div>
+                    <div class="heading-title">Action</div>
+                  </div>
+                  <div class="routes-data-container row-data-container">
+                    <div class="routes-data-body row-data-body">
+                      <div class="data-routes data-txt">The Botanical Gardens</div>
+                      <div class="data-routes data-txt">Plantage Middenlaan 2a</div>
+                      <div class="data-routes data-txt">Plantage Kerklaan 38-40</div>
+                      <div class="data-routes">1 hr</div>
+                      <div class="data-routes">45 km</div>
+                      <div class="data-routes">
+                        <button type="button" class="btn edit-btn view-btn">View</button>
+                      </div>
+                      <div class="data-routes">
+                        <button type="button" class="btn edit-btn editBtn">Edit</button>
+                      </div>
+                    </div>
+                    <div class="routes-data-body row-data-body">
+                      <div class="data-routes data-txt">The Old Church (Oude Kerk)</div>
+                      <div class="data-routes data-txt">Dam Square</div>
+                      <div class="data-routes data-txt">Oudekerksplein 23, 1012 GX Amsterdam</div>
+                      <div class="data-routes">1 hr</div>
+                      <div class="data-routes">45 km</div>
+                      <div class="data-routes">
+                        <button type="button" class="btn edit-btn view-btn">View</button>
+                      </div>
+                      <div class="data-routes">
+                        <button type="button" class="btn edit-btn editBtn">Edit</button>
+                      </div>
+                    </div>
+                    <div class="routes-data-body row-data-body">
+                      <div class="data-routes data-txt">The Stedelijk</div>
+                      <div class="data-routes data-txt">Amsterdam garden</div>
+                      <div class="data-routes data-txt">Museumplein 10, 1071 DJ Amsterdam</div>
+                      <div class="data-routes">1 hr</div>
+                      <div class="data-routes">45 km</div>
+                      <div class="data-routes">
+                        <button type="button" class="btn edit-btn view-btn">View</button>
+                      </div>
+                      <div class="data-routes">
+                        <button type="button" class="btn edit-btn editBtn">Edit</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="view-map popup-container">
+                    <form class="big-form">
+                      <div class="box big-box">
+                        <div class="heading-box">
+                          <div class="title-box data-txt">Schi - Cons Route</div>
+                          <div class="close-icon"><i class="fas fa-times"></i></div>
+                        </div>
+                        <div class="input-container d-flex">
+                          <div class="left-content">
+                            <div class="point">
+                              <div class="start-point">
+                                <div class="icon">
+                                  <img src="../images/oval.png" class="img-fluid">
+                                </div>
+                                <div class="txt data-txt">
+                                  Schiphol Airport, Schiphol Boulevard 1117, 1….
+                                </div>
+                              </div>
+                              <div class="end-point">
+                                <div class="icon">
+                                  <img src="../images/placeholder.png" class="img-fluid">
+                                </div>
+                                <div class="txt data-txt">
+                                  Jet Aviation Netherlands - Amsterdam, GA…….
+                                </div>
+                              </div>
+                            </div>
+                            <div class="trip-content">
+                              <div class="title">Route info</div>
+                              <div class="route d-flex">
+                                <div class="vehicle d-flex">
+                                  <div class="icon">
+                                    <img src="../images/sedan-car-front.png" class="img-fluid">
+                                  </div>
+                                  <div class="vehicle-name">Via A4</div>
+                                </div>
+                                <div class="trip-details">
+                                  <div class="trip-time">23 min</div>
+                                  <div class="trip-distance">12.6 km</div>
+                                </div>
+                              </div>
+                              <div class="route d-flex">
+                                <div class="vehicle d-flex">
+                                  <div class="icon">
+                                    <img src="../images/sedan-car-front.png" class="img-fluid">
+                                  </div>
+                                  <div class="vehicle-name">Via s106</div>
+                                </div>
+                                <div class="trip-details">
+                                  <div class="trip-time">25 min</div>
+                                  <div class="trip-distance">12.7 km</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="right-content">
+                            <div class="map"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="popup-container map-popup edit-map">
+                    <form class="big-form">
+                      <div class="box big-box">
+                        <div class="heading-box">
+                          <div class="title-box">Edit Route</div>
+                          <div class="close-icon"><i class="fas fa-times"></i></div>
+                        </div>
+                        <div class="input-container data-txt">
+                          <input type="text" class="form-control input-txt" placeholder="Add New Route">
+                          <div class="input-icon-group">
+                            <div class="input-icon">
+                              <div class="icon">
+                                <img src="../images/oval.png" class="img-fluid">
+                              </div>
+                              <input type="text" class="form-control input-txt" placeholder="Choose starting point or click on map">
+                            </div>
+                            <div class="input-icon">
+                              <div class="icon">
+                                <img src="../images/placeholder.png" class="img-fluid">
+                              </div>
+                              <input type="text" class="form-control input-txt" placeholder="Choose destination">
+                            </div>
+                          </div>
+                          <div class="map"></div>
+                        </div>
+                        <div class="popup-control">
+                          <button class="btn cancel-popup" type="button">Cancel</button>
+                          <button class="btn save-popup main-btn" type="button">Save Updates</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Routes Settings -->
+            <!-- Start Passengers Settings -->
+            <div class="passengers-settings">
+              <div class="settings-content">
+                <div class="heading-control main-popup-container d-flex align-items-center">
+                  <div class="search-input position-relative">
+                    <input type="search" class="form-control" placeholder="Search all passengers">
+                    <div class="icon d-block position-absolute">
+                      <i class="fas fa-search"></i>
+                    </div>
+                  </div>
+                  <div class="add-btn">
+                    <button class="btn" type="button">
+                      <img src="../images/add.png" class="img-fluid">
+                      ADD NEW PASSENGER
+                    </button>
+                  </div>
+                  <div class="popup-container main-popup add-popup">
+                    <form class="big-form">
+                      <div class="box big-box">
+                        <div class="heading-box">
+                          <div class="title-box">Add New Passenger</div>
+                          <div class="close-icon"><i class="fas fa-times"></i></div>
+                        </div>
+                        <div class="main-popup-content">
+                          <div class="row-edit d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Personal photo</div>
+                              <div class="btn-container">
+                                <input type="file" class="placeholder-btn optional">
+                                <button class="btn upload-btn" type="button">Upload Photo</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row-edit d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Title</div>
+                              <div class="btn-container">
+                                <button class="btn popup-btn" type="button">Choose Title</button>
+                              </div>
+                            </div>
+                            <div class="popup-container">
+                              <form>
+                                <div class="box">
+                                  <div class="heading-box">
+                                    <div class="title-box">Change title</div>
+                                    <div class="close-icon"><i class="fas fa-times"></i></div>
+                                  </div>
+                                  <div class="input-container">
+                                    <div class="dropdown-txt">
+                                      <input type="text" class="form-control" placeholder="Title">
+                                      <div class="dropdown-list-popup">
+                                        <div class="item-popup">Mr</div>
+                                        <div class="item-popup">Ms</div>
+                                        <div class="item-popup">Mrs</div>
+                                        <div class="item-popup">Dr</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="popup-control">
+                                    <button class="btn cancel-popup" type="button">Cancel</button>
+                                    <button class="btn save-popup" type="button">Add</button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          <div class="row-edit d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Name</div>
+                              <div class="btn-container">
+                                <button class="btn popup-btn" type="button">Enter Passenger Name</button>
+                              </div>
+                            </div>
+                            <div class="popup-container">
+                              <form>
+                                <div class="box">
+                                  <div class="heading-box">
+                                    <div class="title-box">Enter Passenger Name</div>
+                                    <div class="close-icon"><i class="fas fa-times"></i></div>
+                                  </div>
+                                  <div class="input-container txt-fields data-txt">
+                                    <input type="text" class="form-control" placeholder="First name">
+                                    <input type="text" class="form-control" placeholder="Last name">
+                                  </div>
+                                  <div class="popup-control">
+                                    <button class="btn cancel-popup" type="button">Cancel</button>
+                                    <button class="btn save-popup" type="button">Add</button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          <div class="row-edit d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Home Address</div>
+                              <div class="btn-container">
+                                <button class="btn popup-btn" type="button">Enter Address</button>
+                              </div>
+                            </div>
+                            <div class="popup-container map-popup">
+                              <div class="box">
+                                <div class="heading-box">
+                                  <div class="title-box">Enter Address</div>
+                                  <div class="close-icon"><i class="fas fa-times"></i></div>
+                                </div>
+                                <div class="input-container data-txt">
+                                  <input type="text" class="form-control" placeholder="Enter Address Details or pick on maps">
+                                  <div class="map"></div>
+                                </div>
+                                <div class="popup-control">
+                                  <button class="btn cancel-popup" type="button">Cancel</button>
+                                  <button class="btn save-popup" type="button">Add</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row-edit d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Phone Number</div>
+                              <div class="btn-container">
+                                <button class="btn popup-btn" type="button">Enter PhoneNumber</button>
+                              </div>
+                            </div>
+                            <div class="popup-container">
+                              <form>
+                                <div class="box">
+                                  <div class="heading-box">
+                                    <div class="title-box">Enter PhoneNumber</div>
+                                    <div class="close-icon"><i class="fas fa-times"></i></div>
+                                  </div>
+                                  <div class="input-container data-txt">
+                                    <div class="dropdown-txt space-bottom">
+                                      <input type="text" class="form-control" placeholder="Country code">
+                                      <div class="dropdown-list-popup">
+                                        <div class="item-popup d-flex">
+                                          <div class="icon">
+                                            <img class="img-fluid" src="../images/britain.jpg" alt="Britain">
+                                          </div>
+                                          <div class="item-popup-txt">+31</div>
+                                        </div>
+                                        <div class="item-popup d-flex">
+                                          <div class="icon">
+                                            <img class="img-fluid" src="../images/france.jpg" alt="Britain">
+                                          </div>
+                                          <div class="item-popup-txt">+20</div>
+                                        </div>
+                                        <div class="item-popup d-flex">
+                                          <div class="icon">
+                                            <img class="img-fluid" src="../images/germany.jpg" alt="Britain">
+                                          </div>
+                                          <div class="item-popup-txt">+10</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <input type="number" class="form-control" placeholder="Phone number">
+                                  </div>
+                                  <div class="popup-control">
+                                    <button class="btn cancel-popup" type="button">Cancel</button>
+                                    <button class="btn save-popup" type="button">Add</button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          <div class="row-edit d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Language</div>
+                              <div class="btn-container">
+                                <button class="btn popup-btn" type="button">Choose Language</button>
+                              </div>
+                            </div>
+                            <div class="popup-container">
+                              <form>
+                                <div class="box">
+                                  <div class="heading-box">
+                                    <div class="title-box">Choose Language</div>
+                                    <div class="close-icon"><i class="fas fa-times"></i></div>
+                                  </div>
+                                  <div class="input-container">
+                                    <div class="dropdown-txt space-bottom">
+                                      <input type="text" class="form-control" placeholder="Language">
+                                      <div class="dropdown-list-popup">
+                                        <div class="item-popup d-flex">
+                                          <div class="icon">
+                                            <img class="img-fluid" src="../images/britain.jpg" alt="Britain">
+                                          </div>
+                                          <div class="item-popup-txt">English</div>
+                                        </div>
+                                        <div class="item-popup d-flex">
+                                          <div class="icon">
+                                            <img class="img-fluid" src="../images/france.jpg" alt="Britain">
+                                          </div>
+                                          <div class="item-popup-txt">Française</div>
+                                        </div>
+                                        <div class="item-popup d-flex">
+                                          <div class="icon">
+                                            <img class="img-fluid" src="../images/germany.jpg" alt="Britain">
+                                          </div>
+                                          <div class="item-popup-txt">Deutschland</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="popup-control">
+                                    <button class="btn cancel-popup" type="button">Cancel</button>
+                                    <button class="btn save-popup" type="button">Add</button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          <div class="row-edit d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Note to Driver</div>
+                              <div class="btn-container">
+                                <button class="btn popup-btn" type="button">Add Note</button>
+                              </div>
+                            </div>
+                            <div class="popup-container">
+                              <div class="box">
+                                <div class="heading-box">
+                                  <div class="title-box">Add Note</div>
+                                  <div class="close-icon"><i class="fas fa-times"></i></div>
+                                </div>
+                                <div class="input-container">
+                                  <input type="text" class="form-control" placeholder="Notes">
+                                </div>
+                                <div class="popup-control">
+                                  <button class="btn cancel-popup" type="button">Cancel</button>
+                                  <button class="btn save-popup" type="button">Add</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="popup-control">
+                          <button class="btn cancel-popup" type="button">Cancel</button>
+                          <button class="btn save-add" type="button">Add</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="main-body main-popup-container">
+                  <div class="passenger-table">
+                    <div class="heading-top-heading d-flex">
+                      <div class="heading-title">Name</div>
+                      <div class="heading-title">Address</div>
+                      <div class="heading-title">Phone no.</div>
+                      <div class="heading-title">Extra Service</div>
+                      <div class="heading-title">Actions</div>
+                    </div>
+                    <div class="passenger-data-container row-data-container">
+                      <div class="passenger-data-body row-data-body" >
+                        <div class="data-passenger data-txt">Dave Kuiprus</div>
+                        <div class="data-passenger d-flex">
+                          <div class="data-txt">The jordaan neighborhood amsterdam</div>
+                          <div class="copy-btn">
+                            <button type="button" class="btn">Copy</button>
+                          </div>
+                        </div>
+                        <div class="data-passenger data-txt d-flex">
+                          <div class="txt2">+20</div>
+                          <div class="txt">0169578145</div>
+                        </div>
+                        <div class="data-passenger">
+                          <div class="icon">
+                            <img src="../images/vip-parking.png" class="img-fluid">
+                          </div>
+                        </div>
+                        <div class="data-passenger">
+                          <button class="btn edit-btn" type="button">Edit</button>
+                        </div>
+                      </div>
+                      <div class="passenger-data-body row-data-body" >
+                        <div class="data-passenger data-txt">Mohamed Emad</div>
+                        <div class="data-passenger d-flex">
+                          <div class="data-txt">24 Sakr Koresh block, Sheraton Maatar Heliopolis</div>
+                          <div class="copy-btn">
+                            <button type="button" class="btn">Copy</button>
+                          </div>
+                        </div>
+                        <div class="data-passenger data-txt d-flex">
+                          <div class="txt2">+10</div>
+                          <div class="txt">123456789</div>
+                        </div>
+                        <div class="data-passenger">
+                          <div class="icon">
+                            <img src="../images/vip-parking.png" class="img-fluid">
+                          </div>
+                        </div>
+                        <div class="data-passenger">
+                          <button class="btn edit-btn" type="button">Edit</button>
+                        </div>
+                      </div>
+                      <div class="passenger-data-body row-data-body" >
+                        <div class="data-passenger data-txt">John Doe</div>
+                        <div class="data-passenger d-flex">
+                          <div class="data-txt">Canada bla bla bla</div>
+                          <div class="copy-btn">
+                            <button type="button" class="btn">Copy</button>
+                          </div>
+                        </div>
+                        <div class="data-passenger data-txt d-flex">
+                          <div class="txt2">+20</div>
+                          <div class="txt">0169578145</div>
+                        </div>
+                        <div class="data-passenger">
+                          <div class="icon">
+                            <img src="../images/vip-parking.png" class="img-fluid">
+                          </div>
+                        </div>
+                        <div class="data-passenger">
+                          <button class="btn edit-btn" type="button">Edit</button>
+                        </div>
+                      </div>
+                      <div class="passenger-data-body row-data-body" >
+                        <div class="data-passenger data-txt">Sia Kate</div>
+                        <div class="data-passenger d-flex">
+                          <div class="data-txt">Australia bla bla bla</div>
+                          <div class="copy-btn">
+                            <button type="button" class="btn">Copy</button>
+                          </div>
+                        </div>
+                        <div class="data-passenger data-txt d-flex">
+                          <div class="txt2">+30</div>
+                          <div class="txt">0023456789</div>
+                        </div>
+                        <div class="data-passenger">
+                          <div class="icon">
+                            <img src="../images/vip-parking.png" class="img-fluid">
+                          </div>
+                        </div>
+                        <div class="data-passenger">
+                          <button class="btn edit-btn" type="button">Edit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popup-container main-popup">
+                    <form class="big-form">
+                      <div class="box big-box">
+                        <div class="heading-box">
+                          <div class="title-box">Edit Passenger</div>
+                          <div class="close-icon"><i class="fas fa-times"></i></div>
+                        </div>
+                        <div class="main-popup-content">
+                          <div class="row-edit d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Personal photo</div>
+                              <div class="btn-container d-flex justify-content-end align-items-center">
+                                <div class="pic">
+                                  <img src="../images/booked.jpg" alt="passenger pic" class="img-fluid">
+                                </div>
+                                <div class="change-pic-container">
+                                  <input type="file" class="placeholder-btn">
+                                  <button type="button" class="btn upload-btn">Change</button>
+                                </div>
+                                <button type="button" class="btn delete-pic">Delete</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row-edit inactive-txt d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Title</div>
+                              <div class="btn-container d-flex justify-content-end">
+                                <div class="txt">Mr</div>
+                                <button class="btn popup-btn" type="button">Edit</button>
+                              </div>
+                            </div>
+                            <div class="popup-container">
+                              <form>
+                                <div class="box">
+                                  <div class="heading-box">
+                                    <div class="title-box">Change title</div>
+                                    <div class="close-icon"><i class="fas fa-times"></i></div>
+                                  </div>
+                                  <div class="input-container">
+                                    <div class="dropdown-txt">
+                                      <input type="text" class="form-control input-txt" placeholder="Title">
+                                      <div class="dropdown-list-popup">
+                                        <div class="item-popup">Mr</div>
+                                        <div class="item-popup">Ms</div>
+                                        <div class="item-popup">Mrs</div>
+                                        <div class="item-popup">Dr</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="popup-control">
+                                    <button class="btn cancel-popup" type="button">Cancel</button>
+                                    <button class="btn save-popup" type="button">Save Updates</button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          <div class="row-edit data-txt d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Name</div>
+                              <div class="btn-container d-flex justify-content-end">
+                                <div class="txt">Andtoni Valiini</div>
+                                <button class="btn popup-btn" type="button">Edit</button>
+                              </div>
+                            </div>
+                            <div class="popup-container">
+                              <form>
+                                <div class="box">
+                                  <div class="heading-box">
+                                    <div class="title-box">Enter Passenger Name</div>
+                                    <div class="close-icon"><i class="fas fa-times"></i></div>
+                                  </div>
+                                  <div class="input-container txt-fields">
+                                    <input type="text" class="form-control input-txt" placeholder="First name">
+                                    <input type="text" class="form-control input-txt" placeholder="Last name">
+                                  </div>
+                                  <div class="popup-control">
+                                    <button class="btn cancel-popup" type="button">Cancel</button>
+                                    <button class="btn save-popup" type="button">Save Updates</button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          <div class="row-edit data-txt d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Home Address</div>
+                              <div class="btn-container d-flex justify-content-end">
+                                <div class="txt">24 sakr koresh blocks - sheraton</div>
+                                <button class="btn popup-btn" type="button">Edit</button>
+                              </div>
+                            </div>
+                            <div class="popup-container map-popup">
+                              <div class="box">
+                                <div class="heading-box">
+                                  <div class="title-box">Enter Address</div>
+                                  <div class="close-icon"><i class="fas fa-times"></i></div>
+                                </div>
+                                <div class="input-container">
+                                  <input type="text" class="form-control input-txt" placeholder="Enter Address Details or pick on maps">
+                                  <div class="map"></div>
+                                </div>
+                                <div class="popup-control">
+                                  <button class="btn cancel-popup" type="button">Cancel</button>
+                                  <button class="btn save-popup" type="button">Add</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row-edit data-txt d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Phone Number</div>
+                              <div class="btn-container d-flex justify-content-end">
+                                <div class="txt-field phone-field d-flex align-items-center">
+                                  <div class="phone d-flex align-items-center">
+                                    <div class="icon">
+                                      <img src="../images/britain.jpg" class="img-fluid">
+                                    </div>
+                                    <div class="code txt2">+31</div>
+                                  </div>
+                                  <div class="txt">01069578145</div>
+                                </div>
+                                <button class="btn popup-btn" type="button">Edit</button>
+                              </div>
+                            </div>
+                            <div class="popup-container">
+                              <form>
+                                <div class="box">
+                                  <div class="heading-box">
+                                    <div class="title-box">Enter PhoneNumber</div>
+                                    <div class="close-icon"><i class="fas fa-times"></i></div>
+                                  </div>
+                                  <div class="input-container">
+                                    <div class="dropdown-txt space-bottom">
+                                      <input type="text" class="form-control input-txt2" placeholder="Country code">
+                                      <div class="dropdown-list-popup">
+                                        <div class="item-popup d-flex">
+                                          <div class="icon">
+                                            <img class="img-fluid" src="../images/britain.jpg" alt="Britain">
+                                          </div>
+                                          <div class="item-popup-txt">+31</div>
+                                        </div>
+                                        <div class="item-popup d-flex">
+                                          <div class="icon">
+                                            <img class="img-fluid" src="../images/france.jpg" alt="Britain">
+                                          </div>
+                                          <div class="item-popup-txt">+20</div>
+                                        </div>
+                                        <div class="item-popup d-flex">
+                                          <div class="icon">
+                                            <img class="img-fluid" src="../images/germany.jpg" alt="Britain">
+                                          </div>
+                                          <div class="item-popup-txt">+10</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <input type="number" class="form-control input-txt" placeholder="Phone number">
+                                  </div>
+                                  <div class="popup-control">
+                                    <button class="btn cancel-popup" type="button">Cancel</button>
+                                    <button class="btn save-popup" type="button">Save Updates</button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          <div class="row-edit d-flex inactive-txt align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Language</div>
+                              <div class="btn-container d-flex justify-content-end">
+                                <div class="txt">English</div>
+                                <button class="btn popup-btn" type="button">Edit</button>
+                              </div>
+                            </div>
+                            <div class="popup-container">
+                              <form>
+                                <div class="box">
+                                  <div class="heading-box">
+                                    <div class="title-box">Choose Language</div>
+                                    <div class="close-icon"><i class="fas fa-times"></i></div>
+                                  </div>
+                                  <div class="input-container">
+                                    <div class="dropdown-txt space-bottom">
+                                      <input type="text" class="form-control input-txt" placeholder="Language">
+                                      <div class="dropdown-list-popup">
+                                        <div class="item-popup d-flex">
+                                          <div class="icon">
+                                            <img class="img-fluid" src="../images/britain.jpg" alt="Britain">
+                                          </div>
+                                          <div class="item-popup-txt">English</div>
+                                        </div>
+                                        <div class="item-popup d-flex">
+                                          <div class="icon">
+                                            <img class="img-fluid" src="../images/france.jpg" alt="Britain">
+                                          </div>
+                                          <div class="item-popup-txt">Française</div>
+                                        </div>
+                                        <div class="item-popup d-flex">
+                                          <div class="icon">
+                                            <img class="img-fluid" src="../images/germany.jpg" alt="Britain">
+                                          </div>
+                                          <div class="item-popup-txt">Deutschland</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="popup-control">
+                                    <button class="btn cancel-popup" type="button">Cancel</button>
+                                    <button class="btn save-popup" type="button">Save Updates</button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          <div class="row-edit d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Note to Driver</div>
+                              <div class="btn-container d-flex justify-content-end">
+                                <div class="txt">This acts as a note to the driver, real note will be written here with maximum of two lines</div>
+                                <button class="btn popup-btn" type="button">Edit</button>
+                              </div>
+                            </div>
+                            <div class="popup-container">
+                              <div class="box">
+                                <div class="heading-box">
+                                  <div class="title-box">Note to Driver</div>
+                                  <div class="close-icon"><i class="fas fa-times"></i></div>
+                                </div>
+                                <div class="input-container">
+                                  <input type="text" class="form-control input-txt" placeholder="Note">
+                                </div>
+                                <div class="popup-control">
+                                  <button class="btn cancel-popup" type="button">Cancel</button>
+                                  <button class="btn save-popup" type="button">Save Updates</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row-edit d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">VIP Parking</div>
+                              <div class="btn-container d-flex justify-content-end">
+                                <label class="switch-container">
+                                  <input type="checkbox">
+                                  <span></span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="popup-container">
+                              <div class="box">
+                                <div class="heading-box">
+                                  <div class="title-box">Change short cut name</div>
+                                  <div class="close-icon"><i class="fas fa-times"></i></div>
+                                </div>
+                                <div class="input-container">
+                                  <input type="text" class="form-control input-txt" placeholder="Short cut name">
+                                </div>
+                                <div class="popup-control">
+                                  <button class="btn cancel-popup" type="button">Cancel</button>
+                                  <button class="btn save-popup" type="button">Save Updates</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row-edit d-flex align-items-center">
+                            <div class="row-content d-flex align-items-center w-100">
+                              <div class="title">Want to delete this passenger?</div>
+                              <div class="btn-container">
+                                <button class="btn delete-data" type="button">Delete passenger</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="popup-control">
+                          <button class="btn cancel-popup" type="button">Cancel</button>
+                          <button class="btn save-popup main-btn" type="button">Save Updates</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Passengers Settings -->
+            <!-- Start Notifications Settings -->
+            <div class="notifications-settings">
+              <form>
+                <div class="settings-content">
+                  <div class="top-title">Recieving Notification</div>
+                  <dvi class="inner-settings">
+                    <div class="row-data">
+                      <div class="checkbox-container">
+                        <label class="no-select">
+                          <input type="checkbox" checked>
+                          <span class="icon"></span>
+                          I want to recieve Notifications via SMS
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row-data">
+                      <div class="checkbox-container">
+                        <label class="no-select">
+                          <input type="checkbox" checked>
+                          <span class="icon"></span>
+                          I want to recieve Notifications via Email
+                        </label>
+                      </div>
+                    </div>
+                  </dvi>
+                </div>
+                <div class="settings-content shadow">
+                  <div class="top-title">Notifications Preferneces</div>
+                  <dvi class="inner-settings">
+                    <div class="row-data">
+                      <div class="checkbox-container">
+                        <label class="no-select">
+                          <input type="checkbox" checked>
+                          <span class="icon"></span>
+                          When driver is assigned
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row-data">
+                      <div class="checkbox-container">
+                        <label class="no-select">
+                          <input type="checkbox" checked>
+                          <span class="icon"></span>
+                          When driver is at location
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row-data">
+                      <div class="checkbox-container">
+                        <label class="no-select">
+                          <input type="checkbox">
+                          <span class="icon"></span>
+                          When client is on board
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row-data">
+                      <div class="checkbox-container">
+                        <label class="no-select">
+                          <input type="checkbox">
+                          <span class="icon"></span>
+                          When booking is altered by dispatcher
+                        </label>
+                      </div>
+                    </div>
+                  </dvi>
+                </div>
+                <div class="settings-content-control text-right">
+                  <button class="revert btn" type="button">Revert Changes</button>
+                  <button class="apply btn" type="button">Apply</button>
+                </div>
+              </form>
+            </div>
+            <!-- End Notifications Settings -->
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- ====== Start Scripts ====== -->
+  <script>
+      let maps = document.querySelectorAll('.map');
+      function initMap() {
+        map = new google.maps.Map(maps[0], {
+          center: {lat: 52.370216, lng: 4.895168},
+          zoom: 12
+        });
+        map = new google.maps.Map(maps[1], {
+          center: {lat: 52.370216, lng: 4.895168},
+          zoom: 12
+        });
+        map = new google.maps.Map(maps[2], {
+          center: {lat: 52.370216, lng: 4.895168},
+          zoom: 12
+        });
+        map = new google.maps.Map(maps[3], {
+          center: {lat: 52.370216, lng: 4.895168},
+          zoom: 12
+        });
+        map = new google.maps.Map(maps[4], {
+          center: {lat: 52.370216, lng: 4.895168},
+          zoom: 12
+        });
+        map = new google.maps.Map(maps[5], {
+          center: {lat: 52.370216, lng: 4.895168},
+          zoom: 12
+        });
+        map = new google.maps.Map(maps[6], {
+          center: {lat: 52.370216, lng: 4.895168},
+          zoom: 12
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvZABePrd0RMYwLEJVYZXM24xQYcRpNTo&callback=initMap" async defer></script>
+  <!-- Main js file -->
+  <script src="../js/main.js"></script>
+  </body>
+  <!-- End body -->
+</html>

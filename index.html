@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Start head -->
+  <head>
+    <!-- Start Meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="conservatorium Booking">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="conservatorium Booking">
+    <meta name="author" content="John Doe">
+    <!-- Start title -->
+    <title>Home</title>
+    <!-- Start links -->
+    <!-- IE Support -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <[end if]-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- FontAwesome v5.7.2 -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Bootstrap v4.2.1 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <!-- End head -->
+  <!-- Start body -->
+  <body class="home">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">
+          <img class="img-fluid" src="images/icons-nav-bar-logo.png" alt="CONSERVATORIUM">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+          <spand class="navbar-toggler-icon"></spand>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar-links">
+          <ul class="navbar-nav links col-md-7 col-12 justify-content-end align-items-center">
+            <li class="nav-item"><a href="booking/" class="nav-link">Add New Booking</a></li>
+            <li class="nav-item"><a href="dashboard/" class="nav-link">My Bookings</a></li>
+            <li class="nav-item"><a href="quotation/" class="nav-link">Request a Quotation</a></li>
+          </ul>
+          <ul class="navbar-nav settings col-md-5 col-12 justify-content-end align-items-center">
+            <li class="nav-item">
+              <div class="search-input">
+                <input type="text" class="form-control" placeholder="Search all the content">
+                <span class="icon"><img src="images/search.png" alt="search" class="img-fluid"></span>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="messages">
+                <num class="msg-num">2</num>
+                <div class="messages-icon">
+                  <img src="images/conversation.png" alt="messages" class="img-fluid">
+                </div>
+                <div class="msg-list dropdown-list">
+                  <div class="msg">
+                    <div class="msg-pic">
+                      <img src="images/member-img.jpg" class="img-fluid">
+                    </div>
+                    <div class="msg-txt">
+                      <div class="msg-member-name">Dave K.</div>
+                      <div class="txt">You look awesome!</div>
+                    </div>
+                  </div>
+                  <div class="msg">
+                    <div class="msg-pic">
+                      <img src="images/booked.jpg" class="img-fluid">
+                    </div>
+                    <div class="msg-txt">
+                      <div class="msg-member-name">Mohamed E.</div>
+                      <div class="txt">Lorem ipsum is placeholder te....</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li> 
+            <li class="nav-item">
+              <div class="member d-flex align-items-center">
+                <div class="member-pic">
+                  <img src="images/member-img.jpg" alt="Dave" class="img-fluid">
+                </div>
+                <div class="notifications-list dropdown-list">
+                  <a href="user/" class="noti">
+                    <div class="noti-content">
+                      <span class="icon">
+                        <img src="images/my-profilex.png" class="img-fluid">
+                      </span>
+                      <span class="text">System Settings</span>
+                    </div>
+                  </a>
+                  <a href="signin.html" class="noti">
+                    <div class="noti-content">
+                      <span class="icon">
+                        <img src="images/signoutx.png" class="img-fluid">
+                      </span>
+                      <span class="text">Signout</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="home-section">
+      <div class="inner-content">
+        <div class="container-fluid">
+          <div class="home-content">
+            <div class="heading">
+              <div class="logo">
+                <img src="images/logo-white.png" alt="logo" class="img-fluid">
+              </div>
+              <div class="title">
+                <h1>Welcome back,<br><span>David Kuipers</span></h1>
+              </div>
+              <div class="user-pic">
+                <img src="images/member-img.jpg" alt="user" class="img-fluid">
+              </div>
+              <div class="user-history">
+                <div class="txt">Last booking made<br>
+                  <strong><em>14 Aug 2019, 7:13 am</em></strong>
+                </div>
+              </div>
+              <div class="home-btn">
+                <a href="booking/" class="btn">
+                  <span class="icon"><img src="images/add.png" class="img-fluid"></span>
+                  ADD NEW BOOKING
+                </a>
+                <a href="dashboard/" class="btn">
+                  <span class="icon"><img src="images/pickup-date-orange.png" class="img-fluid"></span>
+                  MANAGE MY BOOKINGS
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="support-chat">
+            <div class="chat-btn">
+              <div class="chat-num">2</div>
+              <button class="btn">
+                <img src="images/help.png" class="img-fluid">
+                Contact Support
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- ====== Start Scripts ====== -->
+  <!-- FontAwesome v5.7.2 -->
+  <!--<script src="js/all.min.js"></script>-->
+  <!-- Main js file -->
+  <script src="js/main.js"></script>
+  </body>
+  <!-- End body -->
+</html>
