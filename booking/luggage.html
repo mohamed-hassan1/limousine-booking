@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Start head -->
+  <head>
+    <!-- Start Meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="conservatorium Booking">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="conservatorium Booking">
+    <meta name="author" content="John Doe">
+    <!-- Start title -->
+    <title>Booking Form</title>
+    <!-- Start links -->
+    <!-- IE Support -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <[end if]-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- FontAwesome v5.7.2 -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- Bootstrap v4.2.1 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <!-- End head -->
+  <!-- Start body -->
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">
+          <img class="img-fluid" src="../images/icons-nav-bar-logo.png" alt="CONSERVATORIUM">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+          <spand class="navbar-toggler-icon"></spand>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar-links">
+          <ul class="navbar-nav links col-md-7 col-12 justify-content-end align-items-center">
+            <li class="nav-item"><a href="../booking/" class="nav-link active">Add New Booking</a></li>
+            <li class="nav-item"><a href="../dashboard/" class="nav-link">My Bookings</a></li>
+            <li class="nav-item"><a href="../quotation/" class="nav-link">Request a Quotation</a></li>
+          </ul>
+          <ul class="navbar-nav settings col-md-5 col-12 justify-content-end align-items-center">
+            <li class="nav-item">
+              <div class="search-input">
+                <input type="text" class="form-control" placeholder="Search all the content">
+                <span class="icon"><img src="../images/search.png" alt="search" class="img-fluid"></span>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="messages">
+                <num class="msg-num">2</num>
+                <div class="messages-icon">
+                  <img src="../images/conversation.png" alt="messages" class="img-fluid">
+                </div>
+                <div class="msg-list dropdown-list">
+                  <div class="msg">
+                    <div class="msg-pic">
+                      <img src="../images/member-img.jpg" class="img-fluid">
+                    </div>
+                    <div class="msg-txt">
+                      <div class="msg-member-name">Dave K.</div>
+                      <div class="txt">You look awesome!</div>
+                    </div>
+                  </div>
+                  <div class="msg">
+                    <div class="msg-pic">
+                      <img src="../images/booked.jpg" class="img-fluid">
+                    </div>
+                    <div class="msg-txt">
+                      <div class="msg-member-name">Mohamed E.</div>
+                      <div class="txt">Lorem ipsum is placeholder te....</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li> 
+            <li class="nav-item">
+              <div class="member d-flex align-items-center">
+                <div class="member-pic">
+                  <img src="../images/member-img.jpg" alt="Dave" class="img-fluid">
+                </div>
+                <div class="notifications-list dropdown-list">
+                  <a href="../user/" class="noti">
+                    <div class="noti-content">
+                      <span class="icon">
+                        <img src="../images/my-profilex.png" class="img-fluid">
+                      </span>
+                      <span class="text">System Settings</span>
+                    </div>
+                  </a>
+                  <a href="../signin.html" class="noti">
+                    <div class="noti-content">
+                      <span class="icon">
+                        <img src="../images/signoutx.png" class="img-fluid">
+                      </span>
+                      <span class="text">Signout</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="header stages fixed-top">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="content col-12 d-flex align-items-center">
+            <div class="stage no-select" data-stage="index">
+              <div class="stage-num"><div class="num">1</div></div>
+              <div class="stage-name">Ride Type</div>
+            </div>
+            <div class="stage no-select" data-stage="pickup">
+              <div class="stage-num"><div class="num">2</div></div>
+              <div class="stage-name">Pickup</div>
+            </div>
+            <div class="stage no-select" data-stage="destination">
+              <div class="stage-num"><div class="num">3</div></div>
+              <div class="stage-name">Destination</div>
+            </div>
+            <div class="stage no-select" data-stage="customer">
+              <div class="stage-num"><div class="num">4</div></div>
+              <div class="stage-name">Customer</div>
+            </div>
+            <div class="stage no-select" data-stage="luggage">
+              <div class="stage-num"><div class="num">5</div></div>
+              <div class="stage-name">Luggage</div>
+            </div>
+            <div class="stage no-select" data-stage="vehicle">
+              <div class="stage-num"><div class="num">6</div></div>
+              <div class="stage-name">Vehicle</div>
+            </div>
+            <div class="stage no-select" data-stage="payment">
+              <div class="stage-num"><div class="num">7</div></div>
+              <div class="stage-name">Payment</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section data-section="luggage" class="main-content form-section luggage">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="content col-12">
+            <div class="row row-content no-gutters align-items-baseline">
+              <div class="left-content">
+                <div class="heading">
+                  <h5 class="d-flex align-items-center">Luggage Type</h5>
+                </div>
+                <form class="form-content">
+                  <div class="inner-content body-content">
+                    <div class="row-group luggage-carry d-flex w-100">
+                      <div class="input-group">
+                        <label class="d-flex align-items-center">
+                          <span class="icon"><img src="../images/icons-luggage-small.png" alt="customer" class="img-fluid"></span>
+                          <span class="text">Carry on luggage</span>
+                        </label>
+                        <div class="inner-group add-minus-input">
+                          <div class="minus">
+                            <span class="minus-icon"><i class="fas fa-minus"></i></span>
+                          </div>
+                          <div class="luggage-num">
+                            <input type="text" id="luggage-num" class="optional" readonly>
+                          </div>
+                          <div class="plus">
+                            <span class="plus-icon"><i class="fas fa-plus"></i></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row-group luggage-check d-flex w-100">
+                      <div class="input-group">
+                        <label class="d-flex align-items-center">
+                          <span class="icon"><img src="../images/icons-luggage-large.png" alt="customer" class="img-fluid"></span>
+                          <span class="text">Checked luggage</span>
+                        </label>
+                        <div class="inner-group add-minus-input">
+                          <div class="minus">
+                            <span class="minus-icon"><i class="fas fa-minus"></i></span>
+                          </div>
+                          <div class="luggage-num">
+                            <input type="text" id="luggage-check" class="optional" readonly>
+                          </div>
+                          <div class="plus">
+                            <span class="plus-icon"><i class="fas fa-plus"></i></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row-group d-flex w-100">
+                      <div class="input-group luggage-special d-block">
+                        <label class="d-flex align-items-center">
+                          <span class="text">Special Luggage with you ?</span>
+                          <input type="checkbox" id="check-toggle">
+                          <span class="switch"></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row-group comment-row w-100">
+                      <div class="input-group comment-group d-block">
+                        <label class="d-flex align-items-center">
+                          <span class="icon"><img src="../images/icons-pickup-comment.png" alt="Comment" class="img-fluid"></span>
+                          <span class="text">If you want to Leave a comment</span>
+                        </label>
+                        <textarea id="comment" class="form-control w-100" placeholder="Click to start typing"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inner-content form-container">
+                    <div class="row no-gutters align-items-center w-100">
+                      <div class="left-inner-content col-sm-6 col-12">
+                        <div class="prev-btn">
+                            <div class="btn-container">
+                              <button type="button" class="btn">
+                                <span class="arrow"><i class="fas fa-angle-left"></i></span>
+                                <span class="text">Previous</span>
+                              </button>
+                            </div>
+                        </div>
+                        <div class="steps-container d-flex justify-content-end align-items-baseline">
+                          <div class="text">Step</div>
+                          <div class="num-container d-flex align-items-baseline">
+                            <span class="num">5</span>
+                            <span class="slash">/</span>
+                            <span class="max-num">7</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="right-inner-content next-btn col-sm-6 col-12">
+                        <div class="btn-container text-right">
+                          <div class="note">Or press Enter to submit</div>
+                          <button type="submit" class="btn" disabled>
+                              <span class="text">Next</span>
+                            <span class="arrow"><i class="fas fa-angle-right"></i></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="right-content">
+                <div class="inner-content">
+                  <div class="title">Booking Summary</div>
+                  <div class="table-body">
+                    <div class="data-container data-ride-type d-flex align-items-baseline">
+                      <div class="data-title">Ride Type</div>
+                      <div class="data-value added">Arrival</div>
+                    </div>
+                    <div class="data-pick-drop">
+                      <div class="data-container data-pickup d-flex align-items-baseline">
+                        <div class="data-title d-flex">
+                            <div class="icon">
+                              <img class="img-fluid" src="../images/icons-pickup-green-pickuparrow.png" alt="pickup">
+                            </div>
+                          <span class="text">Pickup</span>
+                        </div>
+                        <div class="data-value added">
+                          <span class="place">Amesterdam Airport</span>
+                          <span class="time">4:30 pm</span>
+                          <span class="id">Flight 198A4</span>
+                        </div>
+                      </div>
+                      <div class="data-container data-dropoff d-flex align-items-baseline">
+                        <div class="data-title d-flex">
+                            <div class="icon">
+                              <img class="img-fluid" src="../images/icons-dropoff-red-dropoff-arrow.png" alt="drop off">
+                            </div>
+                          <span class="text">Drop Off</span>
+                        </div>
+                        <div class="data-value added">Conservatrioum Hotel</div>
+                      </div>
+                    </div>
+                    <div class="data-container data-customer d-flex align-items-baseline">
+                      <div class="data-title">Customer</div>
+                      <div class="data-value added">Mr. Dave Kuipers</div>
+                    </div>
+                    <div class="data-container data-luggage d-flex align-items-baseline">
+                      <div class="data-title">Luggage</div>
+                      <div class="data-value">Empty</div>
+                    </div>
+                    <div class="data-container data-vehicle d-flex align-items-baseline">
+                      <div class="data-title">Vehicle</div>
+                      <div class="data-value">Empty</div>
+                    </div>
+                    <div class="data-container data-balance d-flex align-items-baseline">
+                      <div class="data-title">Total<br>Balance</div>
+                      <div class="data-value">
+                        <span class="sign"><i class="fas fa-euro-sign"></i></span>
+                        <span class="price">0</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container-fluid h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+          <div class="col-12 text-center">
+            <div class="title">&copy; 2018 SCLSV Limousine Services</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- ====== Start Scripts ====== -->
+  <!-- FontAwesome v5.7.2 -->
+  <!--<script src="js/all.min.js"></script>-->
+  <!-- Main js file -->
+  <script src="../js/main.js"></script>
+  </body>
+  <!-- End body -->
+</html>
