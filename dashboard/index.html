@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Start head -->
+  <head>
+    <!-- Start Meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="conservatorium Booking">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="conservatorium Booking">
+    <meta name="author" content="John Doe">
+    <!-- Start title -->
+    <title>Dashboard</title>
+    <!-- Start links -->
+    <!-- IE Support -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <[end if]-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- FontAwesome v5.7.2 -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- Bootstrap v4.2.1 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <!-- End head -->
+  <!-- Start body -->
+  <body class="dash">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">
+          <img class="img-fluid" src="../images/icons-nav-bar-logo.png" alt="CONSERVATORIUM">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+          <spand class="navbar-toggler-icon"></spand>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar-links">
+          <ul class="navbar-nav links col-md-7 col-12 justify-content-end align-items-center">
+            <li class="nav-item"><a href="../booking/" class="nav-link">Add New Booking</a></li>
+            <li class="nav-item"><a href="../dashboard/" class="nav-link active">My Bookings</a></li>
+            <li class="nav-item"><a href="../quotation/" class="nav-link">Request a Quotation</a></li>
+          </ul>
+          <ul class="navbar-nav settings col-md-5 col-12 justify-content-end align-items-center">
+            <li class="nav-item">
+              <div class="search-input">
+                <input type="text" class="form-control" placeholder="Search all the content">
+                <span class="icon"><img src="../images/search.png" alt="search" class="img-fluid"></span>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="messages">
+                <num class="msg-num">2</num>
+                <div class="messages-icon">
+                  <img src="../images/conversation.png" alt="messages" class="img-fluid">
+                </div>
+                <div class="msg-list dropdown-list">
+                  <div class="msg">
+                    <div class="msg-pic">
+                      <img src="../images/member-img.jpg" class="img-fluid">
+                    </div>
+                    <div class="msg-txt">
+                      <div class="msg-member-name">Dave K.</div>
+                      <div class="txt">You look awesome!</div>
+                    </div>
+                  </div>
+                  <div class="msg">
+                    <div class="msg-pic">
+                      <img src="../images/booked.jpg" class="img-fluid">
+                    </div>
+                    <div class="msg-txt">
+                      <div class="msg-member-name">Mohamed E.</div>
+                      <div class="txt">Lorem ipsum is placeholder te....</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li> 
+            <li class="nav-item">
+              <div class="member d-flex align-items-center">
+                <div class="member-pic">
+                  <img src="../images/member-img.jpg" alt="Dave" class="img-fluid">
+                </div>
+                <div class="notifications-list dropdown-list">
+                  <a href="../user/" class="noti">
+                    <div class="noti-content">
+                      <span class="icon">
+                        <img src="../images/my-profilex.png" class="img-fluid">
+                      </span>
+                      <span class="text">System Settings</span>
+                    </div>
+                  </a>
+                  <a href="../signin.html" class="noti">
+                    <div class="noti-content">
+                      <span class="icon">
+                        <img src="../images/signoutx.png" class="img-fluid">
+                      </span>
+                      <span class="text">Signout</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="header dash-control pr-3 pl-3">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="row no-gutters content">
+              <div class="left-content d-flex">
+                <div class="title">
+                  <h2>My Bookings</h2>
+                </div>
+                <div class="input-content d-flex align-items-center">
+                  <div class="search-input d-flex">
+                    <span class="icon"><i class="fas fa-search"></i></span>
+                    <input type="text" id="search" class="form-control" placeholder="Enter booking ID">
+                    <span class="close-icon"><i class="fas fa-times-circle"></i></span>
+                    <button type="button" class="btn">SEARCH</button>
+                  </div>
+                  <div class="filter">
+                    <button type="button" class="btn d-flex align-items-center">
+                      <span class="line d-inline-block">
+                        <span class="d-block">&nbsp;</span>
+                        <span class="d-block">&nbsp;</span>
+                        <span class="d-block">&nbsp;</span>
+                      </span>
+                      <span class="text d-inline-block">FILTERS</span>
+                      <div class="filter-num">
+                        <div class="num">3</div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+                <div class="filter-menu">
+                  <div class="menu-content">
+                    <span class="icon-arrow"><i class="fas fa-chevron-up"></i></span>
+                    <div class="inner-content d-flex align-items-end">
+                      <div class="input-group booking-status">
+                        <label class="d-block">
+                          <span class="text">By booking status</span>
+                        </label>
+                        <div class="inner-group position-relative select-box">
+                          <input type="text" class="input-booking-status form-control" readonly>
+                          <span class="select-box-title">Select Status</span>
+                          <div class="drop-list">
+                            <div class="data-droplist">
+                              <div class="text">In progress</div>
+                            </div>
+                            <div class="data-droplist">
+                              <div class="text">Sent to Subcontractor</div>
+                            </div>
+                            <div class="data-droplist">
+                              <div class="text">Quote Ok</div>
+                            </div>
+                            <div class="data-droplist">
+                              <div class="text">Quotation Confirmed</div>
+                            </div>
+                            <div class="data-droplist">
+                              <div class="text">Invoice Ok</div>
+                            </div>
+                            <div class="data-droplist">
+                              <div class="text">Invoice Confirmed</div>
+                            </div>
+                            <div class="data-droplist">
+                              <div class="text">Cancelled</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="input-group specific-date">
+                        <label class="d-flex align-items-center">
+                          <span class="text">On specific date</span>
+                        </label>
+                        <div class="inner-group position-relative datepicker-input select-box">
+                          <span class="icon"><img class="img-fluid" src="../images/calendar.png"></span>
+                          <input type="text" class="input-specific-date form-control datepicker" readonly>
+                          <span class="select-box-title">Select a date</span>
+                        </div>
+                      </div>
+                      <div class="input-group from-date">
+                        <label class="d-flex align-items-center">
+                          <span class="text">By date range</span>
+                        </label>
+                        <div class="inner-group position-relative datepicker-input select-box">
+                          <span class="icon"><img class="img-fluid" src="../images/calendar.png"></span>
+                          <input type="text" class="input-from-date form-control datepicker" readonly>
+                          <span class="select-box-title">From</span>
+                        </div>
+                      </div>
+                      <div class="input-group to-date">
+                        <div class="inner-group position-relative datepicker-input select-box">
+                          <span class="icon"><img class="img-fluid" src="../images/calendar.png"></span>
+                          <input type="text" class="input-from-date form-control datepicker" readonly>
+                          <span class="select-box-title">To</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clear-filter">
+                      <button type="button" class="btn">Clear All Filters</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="right-content d-flex align-items-end">
+                <div class="add-booking">
+                  <a href="../booking/" class="btn">
+                    <span class="icon"><i class="fas fa-plus"></i></span>
+                    <span class="text">ADD NEW BOOKING</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="dash-content">
+      <div class="loader">
+        <div class="overlay position-fixed d-flex w-100 h-100 justify-content-center align-items-center">
+          <div class="spinner"></div>
+        </div>
+      </div>
+      <div class="modify-model">
+        <div class="box">
+          <div class="box-heading">
+            <div class="title">Send Modification Message</div>
+            <div class="close-btn">
+              <img src="../images/close.png" class="img-fluid">
+            </div>
+          </div>
+          <div class="box-body">
+            <div class="info">
+              <div class="info-txt">Booking ID <strong>10021</strong></div>
+              <div class="info-txt">Date <strong>Feb 3 ,2019</strong></div>
+              <div class="info-txt">Passenger <strong>Mr. Adam Sandler</strong></div>
+            </div>
+            <textarea placeholder="Start typing here ..."></textarea>
+            <a class="box-btn" href="#" class="btn">Send</a>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="pl-3 pr-3">
+          <div class="data-content">
+            <div class="data-heading d-flex">
+              <div class="heading booking-id">Booking ID</div>
+              <div class="heading date">Date</div>
+              <div class="heading status">Status</div>
+              <div class="heading invoice">Invoice/Quotation</div>
+              <div class="heading managed-by">Managed by</div>
+              <div class="heading booked-by">Booked by</div>
+              <div class="heading created-on">Created On</div>
+            </div>
+            <div class="data-body">
+              <div class="data-row">
+                <div class="data-title">
+                  <div class="data-title-content d-flex align-items-center">
+                    <div class="data data-booking-id">
+                      <div class="inner-data">10021</div>
+                    </div>
+                    <div class="data data-date">
+                      <div class="inner-data">Feb 3, 2019</div>
+                    </div>
+                    <div class="data data-status">
+                      <div class="inner-data">Accepted</div>
+                    </div>
+                    <div class="data data-invoice">
+                      <div class="inner-data">
+                        <button type="button" class="btn d-flex align-items-center">
+                          <span class="icon">
+                            <img src="../images/download-invoice.png" class="img-fluid">
+                          </span>
+                          <span class="text">Download Invoice</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="data data-managed-by">
+                      <div class="inner-data">
+                        <div class="inner-content d-flex align-items-center">
+                          <div class="pic">
+                            <img src="../images/member-img.jpg" class="img-fluid">
+                          </div>
+                          <div class="text">Dave K.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data data-booked-by">
+                      <div class="inner-data">
+                        <div class="inner-content d-flex align-items-center">
+                          <div class="pic">
+                            <img src="../images/booked.jpg" class="img-fluid">
+                          </div>
+                          <div class="text">Mohamed E.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data data-created-on">
+                      <div class="inner-data">Feb 1, 2019</div>
+                    </div>
+                    <div class="data-btn">
+                      <button type="button" class="btn">
+                        <img src="../images/modify-orange.png" class="img-fluid">
+                        MODIFY
+                      </button>
+                    </div>
+                    <div class="arrow-icon"><i class="fas fa-chevron-down"></i></div>
+                  </div>
+                </div>
+                <div class="description-menu">
+                  <div class="data-description d-flex">
+                    <div class="des-content des-service">
+                      <div class="des-title-container">
+                        <div class="des-title">Service</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-id">10021 - 1 - 1</div>
+                        <button type="button" class="btn d-flex align-items-center">
+                          <span class="icon">
+                            <img src="../images/download-invoice.png" class="img-fluid">
+                          </span>
+                          <span class="text">Download Voucher</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="des-content des-date-time">
+                      <div class="des-title-container">
+                        <div class="des-title">Date</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-date">Feb 3, 2019</div>
+                        <div class="des-time">10:00 PM</div>
+                      </div>
+                    </div>
+                    <div class="des-content des-class">
+                      <div class="des-title-container">
+                        <div class="des-title">Class</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-type">Arrival Transfer</div>
+                        <div class="des-class-type">Class A</div>
+                      </div>
+                    </div>
+                    <div class="des-content des-passenger">
+                      <div class="des-title-container">
+                        <div class="des-title">Passenger</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-name">Mr. Adam Sandler</div>
+                        <div class="des-passenger-num d-flex">
+                          <div class="icon">
+                            <img src="../images/passenger.png" class="img-fluid">
+                          </div>
+                          <div class="num"><span>3</span></div>
+                        </div>
+                        <div class="des-luggage-num d-flex">
+                          <div class="icon">
+                            <img src="../images/briefcase.png" class="img-fluid">
+                          </div>
+                          <div class="num"><span>2</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="des-content des-route">
+                      <div class="des-title-container">
+                        <div class="des-title">Route</div> 
+                      </div>
+                      <div class="text-container">
+                        <div class="des-pickup d-flex">
+                          <div class="icon">
+                            <img src="../images/icons-pickup-green-pickuparrow.png" class="img-fluid">
+                          </div>
+                          <div class="icon">
+                            <img src="../images/airplane.png" class="img-fluid">
+                          </div>
+                          <div class="text">
+                            <div class="pickup-address">Amsterdam Airport Schiphol</div>
+                            <div class="pickup-vehicle">Flight N: 129812</div>
+                            <div class="pickup-time">16:00 PM</div>
+                          </div>
+                        </div>
+                        <div class="des-dropoff d-flex">
+                          <div class="icon">
+                            <img src="../images/icons-dropoff-red-dropoff-arrow.png" class="img-fluid">
+                          </div>
+                          <div class="icon">
+                            <img src="../images/train.png" class="img-fluid">
+                          </div>
+                          <div class="text">
+                            <div class="dropoff-address">Amsterdam Centraal</div>
+                            <div class="dropoff-vehicle">Train N: 129812</div>
+                            <div class="dropoff-time">16:00 PM</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="des-content des-driver">
+                      <div class="des-title-container">
+                        <div class="des-title">Driver</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-driver-name">Mr. James Kris</div>
+                        <div class="des-driver-num">1999377625146</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="data-row">
+                <div class="data-title">
+                  <div class="data-title-content d-flex align-items-center">
+                    <div class="data data-booking-id">
+                      <div class="inner-data">10021</div>
+                    </div>
+                    <div class="data data-date">
+                      <div class="inner-data">Feb 3, 2019</div>
+                    </div>
+                    <div class="data data-status">
+                      <div class="inner-data pending">Pending</div>
+                    </div>
+                    <div class="data data-invoice">
+                      <div class="inner-data">
+                        <button type="button" class="btn d-flex align-items-center">
+                          <span class="icon">
+                            <img src="../images/download-invoice.png" class="img-fluid">
+                          </span>
+                          <span class="text">Download Invoice</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="data data-managed-by">
+                      <div class="inner-data">
+                        <div class="inner-content d-flex align-items-center">
+                          <div class="pic">
+                            <img src="../images/member-img.jpg" class="img-fluid">
+                          </div>
+                          <div class="text">Dave K.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data data-booked-by">
+                      <div class="inner-data">
+                        <div class="inner-content d-flex align-items-center">
+                          <div class="pic">
+                            <img src="../images/booked.jpg" class="img-fluid">
+                          </div>
+                          <div class="text">Mohamed E.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data data-created-on">
+                      <div class="inner-data">Feb 1, 2019</div>
+                    </div>
+                    <div class="data-btn">
+                      <button type="button" class="btn">
+                        <img src="../images/modify-orange.png" class="img-fluid">
+                        MODIFY
+                      </button>
+                    </div>
+                    <div class="arrow-icon"><i class="fas fa-chevron-down"></i></div>
+                  </div>
+                </div>
+                <div class="description-menu">
+                  <div class="data-description d-flex">
+                    <div class="des-content des-service">
+                      <div class="des-title-container">
+                        <div class="des-title">Service</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-id">10021 - 1 - 1</div>
+                        <button type="button" class="btn d-flex align-items-center">
+                          <span class="icon">
+                            <img src="../images/download-invoice.png" class="img-fluid">
+                          </span>
+                          <span class="text">Download Voucher</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="des-content des-date-time">
+                      <div class="des-title-container">
+                        <div class="des-title">Date</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-date">Feb 3, 2019</div>
+                        <div class="des-time">10:00 PM</div>
+                      </div>
+                    </div>
+                    <div class="des-content des-class">
+                      <div class="des-title-container">
+                        <div class="des-title">Class</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-type">Arrival Transfer</div>
+                        <div class="des-class-type">Class A</div>
+                      </div>
+                    </div>
+                    <div class="des-content des-passenger">
+                      <div class="des-title-container">
+                        <div class="des-title">Passenger</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-name">Mr. Adam Sandler</div>
+                        <div class="des-passenger-num d-flex">
+                          <div class="icon">
+                            <img src="../images/passenger.png" class="img-fluid">
+                          </div>
+                          <div class="num"><span>3</span></div>
+                        </div>
+                        <div class="des-luggage-num d-flex">
+                          <div class="icon">
+                            <img src="../images/briefcase.png" class="img-fluid">
+                          </div>
+                          <div class="num"><span>2</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="des-content des-route">
+                      <div class="des-title-container">
+                        <div class="des-title">Route</div> 
+                      </div>
+                      <div class="text-container">
+                        <div class="des-pickup d-flex">
+                          <div class="icon">
+                            <img src="../images/icons-pickup-green-pickuparrow.png" class="img-fluid">
+                          </div>
+                          <div class="icon">
+                            <img src="../images/airplane.png" class="img-fluid">
+                          </div>
+                          <div class="text">
+                            <div class="pickup-address">Amsterdam Airport Schiphol</div>
+                            <div class="pickup-vehicle">Flight N: 129812</div>
+                            <div class="pickup-time">16:00 PM</div>
+                          </div>
+                        </div>
+                        <div class="des-dropoff d-flex">
+                          <div class="icon">
+                            <img src="../images/icons-dropoff-red-dropoff-arrow.png" class="img-fluid">
+                          </div>
+                          <div class="icon">
+                            <img src="../images/train.png" class="img-fluid">
+                          </div>
+                          <div class="text">
+                            <div class="dropoff-address">Amsterdam Centraal</div>
+                            <div class="dropoff-vehicle">Train N: 129812</div>
+                            <div class="dropoff-time">16:00 PM</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="des-content des-driver">
+                      <div class="des-title-container">
+                        <div class="des-title">Driver</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-driver-name">Mr. James Kris</div>
+                        <div class="des-driver-num">1999377625146</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="data-row">
+                <div class="data-title">
+                  <div class="data-title-content d-flex align-items-center">
+                    <div class="data data-booking-id">
+                      <div class="inner-data">10021</div>
+                    </div>
+                    <div class="data data-date">
+                      <div class="inner-data">Feb 3, 2019</div>
+                    </div>
+                    <div class="data data-status">
+                      <div class="inner-data">Accepted</div>
+                    </div>
+                    <div class="data data-invoice">
+                      <div class="inner-data">
+                        <button type="button" class="btn d-flex align-items-center">
+                          <span class="icon">
+                            <img src="../images/download-invoice.png" class="img-fluid">
+                          </span>
+                          <span class="text">Download Invoice</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="data data-managed-by">
+                      <div class="inner-data">
+                        <div class="inner-content d-flex align-items-center">
+                          <div class="pic">
+                            <img src="../images/member-img.jpg" class="img-fluid">
+                          </div>
+                          <div class="text">Dave K.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data data-booked-by">
+                      <div class="inner-data">
+                        <div class="inner-content d-flex align-items-center">
+                          <div class="pic">
+                            <img src="../images/booked.jpg" class="img-fluid">
+                          </div>
+                          <div class="text">Mohamed E.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data data-created-on">
+                      <div class="inner-data">Feb 1, 2019</div>
+                    </div>
+                    <div class="data-btn">
+                      <button type="button" class="btn">
+                        <img src="../images/modify-orange.png" class="img-fluid">
+                        MODIFY
+                      </button>
+                    </div>
+                    <div class="arrow-icon"><i class="fas fa-chevron-down"></i></div>
+                  </div>
+                </div>
+                <div class="description-menu">
+                  <div class="data-description d-flex">
+                    <div class="des-content des-service">
+                      <div class="des-title-container">
+                        <div class="des-title">Service</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-id">10021 - 1 - 1</div>
+                        <button type="button" class="btn d-flex align-items-center">
+                          <span class="icon">
+                            <img src="../images/download-invoice.png" class="img-fluid">
+                          </span>
+                          <span class="text">Download Voucher</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="des-content des-date-time">
+                      <div class="des-title-container">
+                        <div class="des-title">Date</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-date">Feb 3, 2019</div>
+                        <div class="des-time">10:00 PM</div>
+                      </div>
+                    </div>
+                    <div class="des-content des-class">
+                      <div class="des-title-container">
+                        <div class="des-title">Class</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-type">Arrival Transfer</div>
+                        <div class="des-class-type">Class A</div>
+                      </div>
+                    </div>
+                    <div class="des-content des-passenger">
+                      <div class="des-title-container">
+                        <div class="des-title">Passenger</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-name">Mr. Adam Sandler</div>
+                        <div class="des-passenger-num d-flex">
+                          <div class="icon">
+                            <img src="../images/passenger.png" class="img-fluid">
+                          </div>
+                          <div class="num"><span>3</span></div>
+                        </div>
+                        <div class="des-luggage-num d-flex">
+                          <div class="icon">
+                            <img src="../images/briefcase.png" class="img-fluid">
+                          </div>
+                          <div class="num"><span>2</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="des-content des-route">
+                      <div class="des-title-container">
+                        <div class="des-title">Route</div> 
+                      </div>
+                      <div class="text-container">
+                        <div class="des-pickup d-flex">
+                          <div class="icon">
+                            <img src="../images/icons-pickup-green-pickuparrow.png" class="img-fluid">
+                          </div>
+                          <div class="icon">
+                            <img src="../images/airplane.png" class="img-fluid">
+                          </div>
+                          <div class="text">
+                            <div class="pickup-address">Amsterdam Airport Schiphol</div>
+                            <div class="pickup-vehicle">Flight N: 129812</div>
+                            <div class="pickup-time">16:00 PM</div>
+                          </div>
+                        </div>
+                        <div class="des-dropoff d-flex">
+                          <div class="icon">
+                            <img src="../images/icons-dropoff-red-dropoff-arrow.png" class="img-fluid">
+                          </div>
+                          <div class="icon">
+                            <img src="../images/train.png" class="img-fluid">
+                          </div>
+                          <div class="text">
+                            <div class="dropoff-address">Amsterdam Centraal</div>
+                            <div class="dropoff-vehicle">Train N: 129812</div>
+                            <div class="dropoff-time">16:00 PM</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="des-content des-driver">
+                      <div class="des-title-container">
+                        <div class="des-title">Driver</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-driver-name">Mr. James Kris</div>
+                        <div class="des-driver-num">1999377625146</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="data-row">
+                <div class="data-title">
+                  <div class="data-title-content d-flex align-items-center">
+                    <div class="data data-booking-id">
+                      <div class="inner-data">10021</div>
+                    </div>
+                    <div class="data data-date">
+                      <div class="inner-data">Feb 3, 2019</div>
+                    </div>
+                    <div class="data data-status">
+                      <div class="inner-data">Accepted</div>
+                    </div>
+                    <div class="data data-invoice">
+                      <div class="inner-data">
+                        <button type="button" class="btn d-flex align-items-center">
+                          <span class="icon">
+                            <img src="../images/download-invoice.png" class="img-fluid">
+                          </span>
+                          <span class="text">Download Invoice</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="data data-managed-by">
+                      <div class="inner-data">
+                        <div class="inner-content d-flex align-items-center">
+                          <div class="pic">
+                            <img src="../images/member-img.jpg" class="img-fluid">
+                          </div>
+                          <div class="text">Dave K.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data data-booked-by">
+                      <div class="inner-data">
+                        <div class="inner-content d-flex align-items-center">
+                          <div class="pic">
+                            <img src="../images/booked.jpg" class="img-fluid">
+                          </div>
+                          <div class="text">Mohamed E.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data data-created-on">
+                      <div class="inner-data">Feb 1, 2019</div>
+                    </div>
+                    <div class="data-btn">
+                      <button type="button" class="btn">
+                        <img src="../images/modify-orange.png" class="img-fluid">
+                        MODIFY
+                      </button>
+                    </div>
+                    <div class="arrow-icon"><i class="fas fa-chevron-down"></i></div>
+                  </div>
+                </div>
+                <div class="description-menu">
+                  <div class="data-description d-flex">
+                    <div class="des-content des-service">
+                      <div class="des-title-container">
+                        <div class="des-title">Service</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-id">10021 - 1 - 1</div>
+                        <button type="button" class="btn d-flex align-items-center">
+                          <span class="icon">
+                            <img src="../images/download-invoice.png" class="img-fluid">
+                          </span>
+                          <span class="text">Download Voucher</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="des-content des-date-time">
+                      <div class="des-title-container">
+                        <div class="des-title">Date</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-date">Feb 3, 2019</div>
+                        <div class="des-time">10:00 PM</div>
+                      </div>
+                    </div>
+                    <div class="des-content des-class">
+                      <div class="des-title-container">
+                        <div class="des-title">Class</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-type">Arrival Transfer</div>
+                        <div class="des-class-type">Class A</div>
+                      </div>
+                    </div>
+                    <div class="des-content des-passenger">
+                      <div class="des-title-container">
+                        <div class="des-title">Passenger</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-name">Mr. Adam Sandler</div>
+                        <div class="des-passenger-num d-flex">
+                          <div class="icon">
+                            <img src="../images/passenger.png" class="img-fluid">
+                          </div>
+                          <div class="num"><span>3</span></div>
+                        </div>
+                        <div class="des-luggage-num d-flex">
+                          <div class="icon">
+                            <img src="../images/briefcase.png" class="img-fluid">
+                          </div>
+                          <div class="num"><span>2</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="des-content des-route">
+                      <div class="des-title-container">
+                        <div class="des-title">Route</div> 
+                      </div>
+                      <div class="text-container">
+                        <div class="des-pickup d-flex">
+                          <div class="icon">
+                            <img src="../images/icons-pickup-green-pickuparrow.png" class="img-fluid">
+                          </div>
+                          <div class="icon">
+                            <img src="../images/airplane.png" class="img-fluid">
+                          </div>
+                          <div class="text">
+                            <div class="pickup-address">Amsterdam Airport Schiphol</div>
+                            <div class="pickup-vehicle">Flight N: 129812</div>
+                            <div class="pickup-time">16:00 PM</div>
+                          </div>
+                        </div>
+                        <div class="des-dropoff d-flex">
+                          <div class="icon">
+                            <img src="../images/icons-dropoff-red-dropoff-arrow.png" class="img-fluid">
+                          </div>
+                          <div class="icon">
+                            <img src="../images/train.png" class="img-fluid">
+                          </div>
+                          <div class="text">
+                            <div class="dropoff-address">Amsterdam Centraal</div>
+                            <div class="dropoff-vehicle">Train N: 129812</div>
+                            <div class="dropoff-time">16:00 PM</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="des-content des-driver">
+                      <div class="des-title-container">
+                        <div class="des-title">Driver</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-driver-name">Mr. James Kris</div>
+                        <div class="des-driver-num">1999377625146</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="data-row">
+                <div class="data-title">
+                  <div class="data-title-content d-flex align-items-center">
+                    <div class="data data-booking-id">
+                      <div class="inner-data">10021</div>
+                    </div>
+                    <div class="data data-date">
+                      <div class="inner-data">Feb 3, 2019</div>
+                    </div>
+                    <div class="data data-status">
+                      <div class="inner-data">Accepted</div>
+                    </div>
+                    <div class="data data-invoice">
+                      <div class="inner-data">
+                        <button type="button" class="btn d-flex align-items-center">
+                          <span class="icon">
+                            <img src="../images/download-invoice.png" class="img-fluid">
+                          </span>
+                          <span class="text">Download Invoice</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="data data-managed-by">
+                      <div class="inner-data">
+                        <div class="inner-content d-flex align-items-center">
+                          <div class="pic">
+                            <img src="../images/member-img.jpg" class="img-fluid">
+                          </div>
+                          <div class="text">Dave K.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data data-booked-by">
+                      <div class="inner-data">
+                        <div class="inner-content d-flex align-items-center">
+                          <div class="pic">
+                            <img src="../images/booked.jpg" class="img-fluid">
+                          </div>
+                          <div class="text">Mohamed E.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data data-created-on">
+                      <div class="inner-data">Feb 1, 2019</div>
+                    </div>
+                    <div class="data-btn">
+                      <button type="button" class="btn">
+                        <img src="../images/modify-orange.png" class="img-fluid">
+                        MODIFY
+                      </button>
+                    </div>
+                    <div class="arrow-icon"><i class="fas fa-chevron-down"></i></div>
+                  </div>
+                </div>
+                <div class="description-menu">
+                  <div class="data-description d-flex">
+                    <div class="des-content des-service">
+                      <div class="des-title-container">
+                        <div class="des-title">Service</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-id">10021 - 1 - 1</div>
+                        <button type="button" class="btn d-flex align-items-center">
+                          <span class="icon">
+                            <img src="../images/download-invoice.png" class="img-fluid">
+                          </span>
+                          <span class="text">Download Voucher</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="des-content des-date-time">
+                      <div class="des-title-container">
+                        <div class="des-title">Date</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-date">Feb 3, 2019</div>
+                        <div class="des-time">10:00 PM</div>
+                      </div>
+                    </div>
+                    <div class="des-content des-class">
+                      <div class="des-title-container">
+                        <div class="des-title">Class</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-type">Arrival Transfer</div>
+                        <div class="des-class-type">Class A</div>
+                      </div>
+                    </div>
+                    <div class="des-content des-passenger">
+                      <div class="des-title-container">
+                        <div class="des-title">Passenger</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-name">Mr. Adam Sandler</div>
+                        <div class="des-passenger-num d-flex">
+                          <div class="icon">
+                            <img src="../images/passenger.png" class="img-fluid">
+                          </div>
+                          <div class="num"><span>3</span></div>
+                        </div>
+                        <div class="des-luggage-num d-flex">
+                          <div class="icon">
+                            <img src="../images/briefcase.png" class="img-fluid">
+                          </div>
+                          <div class="num"><span>2</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="des-content des-route">
+                      <div class="des-title-container">
+                        <div class="des-title">Route</div> 
+                      </div>
+                      <div class="text-container">
+                        <div class="des-pickup d-flex">
+                          <div class="icon">
+                            <img src="../images/icons-pickup-green-pickuparrow.png" class="img-fluid">
+                          </div>
+                          <div class="icon">
+                            <img src="../images/airplane.png" class="img-fluid">
+                          </div>
+                          <div class="text">
+                            <div class="pickup-address">Amsterdam Airport Schiphol</div>
+                            <div class="pickup-vehicle">Flight N: 129812</div>
+                            <div class="pickup-time">16:00 PM</div>
+                          </div>
+                        </div>
+                        <div class="des-dropoff d-flex">
+                          <div class="icon">
+                            <img src="../images/icons-dropoff-red-dropoff-arrow.png" class="img-fluid">
+                          </div>
+                          <div class="icon">
+                            <img src="../images/train.png" class="img-fluid">
+                          </div>
+                          <div class="text">
+                            <div class="dropoff-address">Amsterdam Centraal</div>
+                            <div class="dropoff-vehicle">Train N: 129812</div>
+                            <div class="dropoff-time">16:00 PM</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="des-content des-driver">
+                      <div class="des-title-container">
+                        <div class="des-title">Driver</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-driver-name">Mr. James Kris</div>
+                        <div class="des-driver-num">1999377625146</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="data-row">
+                <div class="data-title">
+                  <div class="data-title-content d-flex align-items-center">
+                    <div class="data data-booking-id">
+                      <div class="inner-data">10021</div>
+                    </div>
+                    <div class="data data-date">
+                      <div class="inner-data">Feb 3, 2019</div>
+                    </div>
+                    <div class="data data-status">
+                      <div class="inner-data">Accepted</div>
+                    </div>
+                    <div class="data data-invoice">
+                      <div class="inner-data">
+                        <button type="button" class="btn d-flex align-items-center">
+                          <span class="icon">
+                            <img src="../images/download-invoice.png" class="img-fluid">
+                          </span>
+                          <span class="text">Download Invoice</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="data data-managed-by">
+                      <div class="inner-data">
+                        <div class="inner-content d-flex align-items-center">
+                          <div class="pic">
+                            <img src="../images/member-img.jpg" class="img-fluid">
+                          </div>
+                          <div class="text">Dave K.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data data-booked-by">
+                      <div class="inner-data">
+                        <div class="inner-content d-flex align-items-center">
+                          <div class="pic">
+                            <img src="../images/booked.jpg" class="img-fluid">
+                          </div>
+                          <div class="text">Mohamed E.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="data data-created-on">
+                      <div class="inner-data">Feb 1, 2019</div>
+                    </div>
+                    <div class="data-btn">
+                      <button type="button" class="btn">
+                        <img src="../images/modify-orange.png" class="img-fluid">
+                        MODIFY
+                      </button>
+                    </div>
+                    <div class="arrow-icon"><i class="fas fa-chevron-down"></i></div>
+                  </div>
+                </div>
+                <div class="description-menu">
+                  <div class="data-description d-flex">
+                    <div class="des-content des-service">
+                      <div class="des-title-container">
+                        <div class="des-title">Service</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-id">10021 - 1 - 1</div>
+                        <button type="button" class="btn d-flex align-items-center">
+                          <span class="icon">
+                            <img src="../images/download-invoice.png" class="img-fluid">
+                          </span>
+                          <span class="text">Download Voucher</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="des-content des-date-time">
+                      <div class="des-title-container">
+                        <div class="des-title">Date</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-date">Feb 3, 2019</div>
+                        <div class="des-time">10:00 PM</div>
+                      </div>
+                    </div>
+                    <div class="des-content des-class">
+                      <div class="des-title-container">
+                        <div class="des-title">Class</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-type">Arrival Transfer</div>
+                        <div class="des-class-type">Class A</div>
+                      </div>
+                    </div>
+                    <div class="des-content des-passenger">
+                      <div class="des-title-container">
+                        <div class="des-title">Passenger</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-name">Mr. Adam Sandler</div>
+                        <div class="des-passenger-num d-flex">
+                          <div class="icon">
+                            <img src="../images/passenger.png" class="img-fluid">
+                          </div>
+                          <div class="num"><span>3</span></div>
+                        </div>
+                        <div class="des-luggage-num d-flex">
+                          <div class="icon">
+                            <img src="../images/briefcase.png" class="img-fluid">
+                          </div>
+                          <div class="num"><span>2</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="des-content des-route">
+                      <div class="des-title-container">
+                        <div class="des-title">Route</div> 
+                      </div>
+                      <div class="text-container">
+                        <div class="des-pickup d-flex">
+                          <div class="icon">
+                            <img src="../images/icons-pickup-green-pickuparrow.png" class="img-fluid">
+                          </div>
+                          <div class="icon">
+                            <img src="../images/airplane.png" class="img-fluid">
+                          </div>
+                          <div class="text">
+                            <div class="pickup-address">Amsterdam Airport Schiphol</div>
+                            <div class="pickup-vehicle">Flight N: 129812</div>
+                            <div class="pickup-time">16:00 PM</div>
+                          </div>
+                        </div>
+                        <div class="des-dropoff d-flex">
+                          <div class="icon">
+                            <img src="../images/icons-dropoff-red-dropoff-arrow.png" class="img-fluid">
+                          </div>
+                          <div class="icon">
+                            <img src="../images/train.png" class="img-fluid">
+                          </div>
+                          <div class="text">
+                            <div class="dropoff-address">Amsterdam Centraal</div>
+                            <div class="dropoff-vehicle">Train N: 129812</div>
+                            <div class="dropoff-time">16:00 PM</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="des-content des-driver">
+                      <div class="des-title-container">
+                        <div class="des-title">Driver</div>
+                      </div>
+                      <div class="text-container">
+                        <div class="des-driver-name">Mr. James Kris</div>
+                        <div class="des-driver-num">1999377625146</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-control d-flex justify-content-center align-items-center">
+            <div class="page-options d-flex align-items-center">
+              <div class="result-container">
+                <span class="num">72</span>
+                Results
+              </div>
+              <div class="show-btn">
+                <button type="button" class="btn">Show</button>
+              </div>
+              <div class="page-select">
+                <div class="inner-group position-relative select-box">
+                  <input type="text" class="input-page-num form-control" readonly>
+                  <span class="select-box-title">1</span>
+                  <div class="drop-list">
+                    <div class="data-droplist">
+                      <div class="text">2</div>
+                    </div>
+                    <div class="data-droplist">
+                      <div class="text">3</div>
+                    </div>
+                    <div class="data-droplist">
+                      <div class="text">4</div>
+                    </div>
+                    <div class="data-droplist">
+                      <div class="text">5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="page-num d-flex">
+              <div class="left-arrow"><i class="fas fa-chevron-left"></i></div>
+              <div class="num-container d-flex align-items-center">
+                <div class="num active">1</div>
+                <div class="num">2</div>
+                <div class="num num-dots d-flex align-self-end">
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="num">8</div>
+                <div class="num">9</div>
+              </div>
+              <div class="right-arrow"><i class="fas fa-chevron-right"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer footer-dash">
+      <div class="container-fluid h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+          <div class="col-12 text-center">
+            <div class="title">&copy; 2018 SCLSV Limousine Services</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- ====== Start Scripts ====== -->
+  <!-- FontAwesome v5.7.2 -->
+  <!--<script src="js/all.min.js"></script>-->
+  <!-- Main js file -->
+  <script src="../js/main.js"></script>
+  </body>
+  <!-- End body -->
+</html>
