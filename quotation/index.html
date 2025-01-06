@@ -279,7 +279,9 @@
                     </div>
                   </div>
                   <div class="right-content">
-                    <div id="map"></div>
+                    <div id="map">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d33644.05547814203!2d4.895168!3d52.370216!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2seg!4v1736070608376!5m2!1sen!2seg" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                   </div>
                 </div>
               </form>
@@ -681,16 +683,6 @@
   <!-- FontAwesome v5.7.2 -->
   <!--<script src="js/all.min.js"></script>-->
   <!-- Main js file -->
-  <script>
-    var map;
-    function initMap() {
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 52.370216, lng: 4.895168},
-        zoom: 12
-      });
-    }
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvZABePrd0RMYwLEJVYZXM24xQYcRpNTo&callback=initMap" async defer></script>
   <script src="../js/main.js"></script>
   </body>
   <!-- End body -->
